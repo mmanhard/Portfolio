@@ -10,9 +10,9 @@ import Layout from "../components/layout"
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
+      portrait: file(relativePath: { eq: "manhard-photo.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid(maxWidth: 800) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -25,12 +25,13 @@ const IndexPage = () => {
       <h1>My name is Michael Manhard.</h1>
       <p>I'm a software engineer from Chicago, IL.</p>
       <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-        <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+        <Img fluid={data.portrait.childImageSharp.fluid} />
       </div>
       <Link style={{margin: 10}} to="/projects/">
+        Projects
       </Link>
       <Link style={{margin: 10}} to="/contact/">
-        Contacts
+        Contact
       </Link>
 
       <a style={{margin: 10}} href="https://www.linkedin.com/in/michael-m-manhard/">
