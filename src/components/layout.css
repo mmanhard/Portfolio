@@ -257,7 +257,8 @@ h2 {
   color: #000;
   font-weight: 700;
   text-rendering: optimizeLegibility;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
+  text-decoration: underline;
 }
 h3 {
   color: #000;
@@ -375,7 +376,9 @@ p {
   font-weight: 700;
   font-size: 0.8rem;
   line-height: 120%;
-  text-align: left;
+  text-align: justify;
+  text-justify: inter-word;
+  margin-top: 0px;
 }
 figure {
   margin-left: 0;
@@ -713,6 +716,13 @@ pre tt:after {
   text-align: left;
 }
 
+.now_page_content {
+  width: 80%;
+  text-align: left;
+  margin-left: 40px;
+  margin-bottom: 40px;
+}
+
 #menu_btns {
   height: 200px;
   display: flex;
@@ -722,6 +732,14 @@ pre tt:after {
 
 #home_container {
   width: 650px;
+}
+
+#now_container {
+  width: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
 }
 
 #portrait {
@@ -738,6 +756,10 @@ pre tt:after {
   #home_container {
     width: 550px;
   }
+
+  #now_container {
+    width: 550px;
+  }
 }
 
 @media only screen and (max-width: 949px){
@@ -746,6 +768,10 @@ pre tt:after {
   }
 
   #home_container {
+    width: 500px;
+  }
+
+  #now_container {
     width: 500px;
   }
 }
@@ -772,6 +798,14 @@ pre tt:after {
     margin-bottom: 20px;
   }
 
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  p {
+    font-size: 0.7rem;
+  }
+
   .nav_btn {
     letter-spacing: 0px;
   }
@@ -793,6 +827,12 @@ pre tt:after {
   }
 
   #home_container {
+    flex: 1;
+    width: 100%;
+  }
+
+  #now_container {
+    flex: 1;
     width: 100%;
   }
 
