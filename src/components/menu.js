@@ -21,10 +21,10 @@ const Menu = ({isOpen, toggleOpen}) => {
           <Link className={"menu_btn"} to="/projects/">
             PROJECTS
           </Link>
-          <Link className={"nav_btn menu_btn"} to="/now/">
+          <Link className={"menu_btn"} to="/now/">
             NOW
           </Link>
-          <Link className={"nav_btn menu_btn"} to="/resume/">
+          <Link className={"menu_btn"} to="/resume/">
             RESUME
           </Link>
         </div>
