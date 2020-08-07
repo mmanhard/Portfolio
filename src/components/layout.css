@@ -28,7 +28,7 @@ header {
   height: 40px;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: flex-end;
 }
 
@@ -251,6 +251,7 @@ h1 {
   font-weight: 800;
   text-rendering: optimizeLegibility;
   font-size: 2.5rem;
+  margin-bottom: 80px;
 }
 h2 {
   color: #000;
@@ -605,11 +606,6 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
-@media only screen and (max-width: 480px) {
-  html {
-    font-size: 100%;
-  }
-}
 
 .column_ctr {
   display: flex;
@@ -703,4 +699,114 @@ pre tt:after {
   flex-direction: column;
   justify-content: center;
   align-items: center
+}
+
+.title_container {
+  background-color: #05386B;
+}
+
+.menu_header {
+  visibility: hidden;
+}
+
+#home_container {
+  width: 650px;
+}
+
+@media only screen and (max-width: 1199px){
+  h1 {
+    font-size: 2.0rem;
+  }
+
+  #home_container {
+    width: 550px;
+  }
+}
+
+@media only screen and (max-width: 949px){
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  #home_container {
+    width: 500px;
+  }
+}
+
+@media only screen and (min-width: 800px){
+  .title_container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 799px){
+  main {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    margin-left: 40px;
+    margin-bottom: 20px;
+  }
+
+  .nav_btn {
+    letter-spacing: 0px;
+  }
+
+  .menu_header {
+    visibility: visible;
+  }
+
+  .menu {
+    visibility: hidden;
+  }
+
+  .title_container {
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  #home_container {
+    width: 100%;
+  }
+
+}
+
+@media only screen and (max-width: 549px){
+  main {
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+  }
+
+  header {
+    left: 0px;
+    right: 0px;
+  }
+
+  h1 {
+    font-size: 1.25rem;
+  }
+
+  .menu_open {
+    bottom: 0px;
+  }
+
+  .menu_overlay {
+    bottom: 0px;
+    right: 0px;
+  }
+
+  .sidebar {
+    visibility: hidden;
+  }
 }

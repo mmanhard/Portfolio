@@ -23,22 +23,23 @@ const IndexPage = () => {
   return (
     <Layout>
 
-      <div className={"column_ctr"} style={{flex: 1, backgroundColor: '#05386B', justifyContent: 'flex-end'}}>
-        <h1 style={{marginBottom: 80}}>WELCOME.</h1>
+      <div className={"column_ctr title_container"}>
+        <h1>WELCOME.</h1>
       </div>
 
-      <div className={"column_ctr"} style={{width: 650}}>
+      <div className={"column_ctr"} id={"home_container"}>
+
         <div style={{ width: `400px`, borderRadius: 40, marginTop: 80, marginBottom: `1.45rem` }}>
           <Img style={{borderRadius: 40}} fluid={data.portrait.childImageSharp.fluid} />
         </div>
 
-        <h3 style={{width: 400, marginLeft: 40, textAlign: 'left'}}>My name is Michael Manhard.</h3>
+        <h3 style={{width: 380, marginLeft: 20, textAlign: 'left'}}>My name is Michael Manhard.</h3>
 
-        <p style={{width: 400, marginLeft: 40}}>
+        <p style={{width: 380, marginLeft: 20}}>
           I grew up, live, and work in and around Chicago.
         </p>
 
-        <p style={{width: 400, marginLeft: 40}}>
+        <p style={{width: 380, marginLeft: 20}}>
           A recent convert from structural engineering, I’m a resourceful engineer
           in the midst of getting his hands dirty designing and building software.
         </p>

@@ -15,18 +15,24 @@ class Layout extends React.Component {
     };
   }
 
+  toggleMenu = () => {
+    this.setState((prevState) => (
+      { isMenuOpen: !prevState.isMenuOpen }
+    ));
+  }
+
   render() {
     const { children } = this.props;
     const { isMenuOpen } = this.state;
 
     return (
       <>
-        <Header />
+        <Header toggleMenu={this.toggleMenu}/>
         <main>{children}</main>
         {isMenuOpen && <div className={'menu_overlay'} />}
         <Menu
           isOpen={isMenuOpen}
-          toggleOpen={() => { this.setState({isMenuOpen: !isMenuOpen})}}/>
+          toggleOpen={this.toggleMenu}/>
         <Sidebar />
       </>
     );
