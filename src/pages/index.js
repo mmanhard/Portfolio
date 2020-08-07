@@ -22,24 +22,29 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <h1>My name is Michael Manhard.</h1>
-      <p>I'm a software engineer from Chicago, IL.</p>
-      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-        <Img fluid={data.portrait.childImageSharp.fluid} />
-      </div>
-      <Link style={{margin: 10}} to="/projects/">
-        Projects
-      </Link>
-      <Link style={{margin: 10}} to="/contact/">
-        Contact
-      </Link>
 
-      <a style={{margin: 10}} href="https://www.linkedin.com/in/michael-m-manhard/">
-        <FontAwesomeIcon style={{width: 30, height: 30}} icon={faLinkedin} />
-      </a>
-      <a style={{margin: 10}} href="https://github.com/mmanhard/">
-        <FontAwesomeIcon style={{width: 30, height: 30}} icon={faGithub} />
-      </a>
+      <div className={"column_ctr"} style={{flex: 1, backgroundColor: '#05386B', justifyContent: 'flex-end'}}>
+        <h1 style={{marginBottom: 80}}>WELCOME.</h1>
+      </div>
+
+      <div className={"column_ctr"} style={{width: 650}}>
+        <div style={{ width: `400px`, borderRadius: 40, marginTop: 80, marginBottom: `1.45rem` }}>
+          <Img style={{borderRadius: 40}} fluid={data.portrait.childImageSharp.fluid} />
+        </div>
+
+        <h3 style={{width: 400, marginLeft: 40, textAlign: 'left'}}>My name is Michael Manhard.</h3>
+
+        <p style={{width: 400, marginLeft: 40}}>
+          I grew up, live, and work in and around Chicago.
+        </p>
+
+        <p style={{width: 400, marginLeft: 40}}>
+          A recent convert from structural engineering, I’m a resourceful engineer
+          in the midst of getting his hands dirty designing and building software.
+        </p>
+
+      </div>
+
     </Layout>
   );
 }
