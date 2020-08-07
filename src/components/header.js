@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header>
         <Link
-          className={"nav_btn"}
+          className={"nav_btn menu_btn_bg column_ctr"}
           to="/"
           style={{marginLeft: 10}}
         >

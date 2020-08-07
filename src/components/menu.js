@@ -15,18 +15,31 @@ const Menu = ({isOpen, toggleOpen}) => {
         </button>
 
         <div className={"column_ctr"}>
-          <Link className={"menu_btn"} to="/">
-            HOME
-          </Link>
-          <Link className={"menu_btn"} to="/projects/">
-            PROJECTS
-          </Link>
-          <Link className={"menu_btn"} to="/now/">
-            NOW
-          </Link>
-          <Link className={"menu_btn"} to="/resume/">
-            RESUME
-          </Link>
+
+          <div className={"column_ctr menu_btn_bg"}>
+            <Link className={"menu_btn"} to="/">
+              HOME
+            </Link>
+          </div>
+
+          <div className={"column_ctr menu_btn_bg"}>
+            <Link className={"menu_btn"} to="/projects/">
+              PROJECTS
+            </Link>
+          </div>
+
+          <div className={"column_ctr menu_btn_bg"}>
+            <Link className={"menu_btn"} to="/now/">
+              NOW
+            </Link>
+          </div>
+
+          <div className={"column_ctr menu_btn_bg"}>
+            <Link className={"menu_btn"} to="/resume/">
+              RESUME
+            </Link>
+          </div>
+
         </div>
       </nav>
     );
@@ -34,11 +47,12 @@ const Menu = ({isOpen, toggleOpen}) => {
   } else {
     return (
       <nav className={"menu"}>
-        <button
-          onClick={toggleOpen}
-          id={"menu_nav_btn"} className={"nav_btn"}>
-          MENU
-        </button>
+        <div className={"rotate_neg_90 menu_btn_bg column_ctr"}>
+          <button
+            onClick={toggleOpen} className={"nav_btn"}>
+            MENU
+          </button>
+        </div>
       </nav>
     );
   }

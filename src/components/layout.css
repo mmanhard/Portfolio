@@ -636,6 +636,18 @@ pre tt:after {
   margin-bottom: 16px;
 }
 
+.menu_btn_bg {
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.menu_btn_bg:hover {
+  background-color: rgba(155,202,188,0.5);
+}
+
 .menu {
   position: fixed;
   min-height: 500px;
@@ -676,7 +688,7 @@ pre tt:after {
   z-index: 10;
 }
 
-#menu_nav_btn {
+.rotate_neg_90 {
   transform: rotate(-90deg);
 }
 
