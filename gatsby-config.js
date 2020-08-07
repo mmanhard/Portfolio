@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Michael Manhard's Portfolio`,
+    title: `M M A N H A R D`,
     description: `I'm Michael Manhard, a software engineer from Chicago. You can learn more about me on this site.`,
     author: `Michael Manhard`,
   },
@@ -34,5 +34,16 @@ module.exports = {
         acl: null,
       },
     },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Montserrat`,
+            variants: [`400`, `700`, `800`]
+          },
+        ],
+      },
+    }
   ],
 }
