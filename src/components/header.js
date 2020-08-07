@@ -1,18 +1,7 @@
 import { Link } from "gatsby"
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
 
-const Header = ({ siteTitle }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
-
+const Header = () => {
   return (
     <header>
         <Link
@@ -20,7 +9,7 @@ const Header = ({ siteTitle }) => {
           to="/"
           style={{marginLeft: 10}}
         >
-          {data.site.siteMetadata.title}
+          {`M M A N H A R D`}
         </Link>
     </header>
   );
