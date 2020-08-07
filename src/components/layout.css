@@ -1,27 +1,60 @@
 html {
-  font-family: sans-serif;
+  font-family: Montserrat, san-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+
 }
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: hsla(0, 0%, 0%, 0.8);
+  font-family: Montserrat, san-serif;
+  font-weight: normal;
+  word-wrap: break-word;
+  font-kerning: normal;
+  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
+  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
+  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
+  font-feature-settings: "kern", "liga", "clig", "calt";
 }
+
+header {
+  position: fixed;
+  top: 0px;
+  left: 40px;
+  right: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+main {
+  background-color: #f8f8f8;
+  position: fixed;
+  min-height: 500px;
+  top: 40px;
+  left: 40px;
+  right: 40px;
+  bottom: 40px;
+  overflow: auto;
+}
+
 article,
 aside,
 details,
 figcaption,
 figure,
 footer,
-header,
 main,
-menu,
-nav,
 section,
 summary {
   display: block;
 }
+
 audio,
 canvas,
 progress,
@@ -39,7 +72,9 @@ progress {
 template {
   display: none;
 }
+
 a {
+  color: #000;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
@@ -105,7 +140,13 @@ hr {
   height: 0;
   overflow: visible;
 }
-button,
+button {
+  background: transparent;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  font-family: Montserrat, san-serif;
+}
 input,
 optgroup,
 select,
@@ -116,20 +157,17 @@ textarea {
 optgroup {
   font-weight: 700;
 }
+
 button,
 input {
   overflow: visible;
 }
+
 button,
 select {
   text-transform: none;
 }
-[type="reset"],
-[type="submit"],
-button,
-html [type="button"] {
-  -webkit-appearance: button;
-}
+
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner,
@@ -137,6 +175,7 @@ button::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
+
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring,
@@ -198,17 +237,6 @@ html {
 *:after {
   box-sizing: inherit;
 }
-body {
-  color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
-  font-weight: normal;
-  word-wrap: break-word;
-  font-kerning: normal;
-  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
-  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
-  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
-  font-feature-settings: "kern", "liga", "clig", "calt";
-}
 img {
   max-width: 100%;
   margin-left: 0;
@@ -229,7 +257,7 @@ h1 {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  color: inherit;
+  color:  inherit;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
@@ -619,4 +647,86 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+
+.column_ctr {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav_btn {
+  color: #000;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1em;
+  letter-spacing: 2px;
+}
+
+.menu_btn {
+  color: #000;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.menu {
+  position: fixed;
+  min-height: 500px;
+  top: 40px;
+  left: 0px;
+  bottom: 40px;
+  width: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+}
+
+.menu_overlay {
+  background-color: #05386b;
+  position: fixed;
+  min-height: 500px;
+  top: 40px;
+  left: 40px;
+  right: 40px;
+  bottom: 40px;
+  z-index: 2;
+}
+
+.menu_open {
+  position: fixed;
+  min-height: 500px;
+  top: 40px;
+  left: 0px;
+  bottom: 40px;
+  width: 280px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  background: #fff;
+  z-index: 10;
+}
+
+#menu_nav_btn {
+  transform: rotate(-90deg);
+}
+
+.sidebar {
+  position: fixed;
+  min-height: 500px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center
 }
