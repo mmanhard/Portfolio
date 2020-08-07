@@ -14,7 +14,7 @@ const Menu = ({isOpen, toggleOpen}) => {
           <FontAwesomeIcon style={{width: 30, height: 30}} icon={faTimes} />
         </button>
 
-        <div className={"column_ctr"}>
+        <div id={"menu_btns"}>
 
           <div className={"column_ctr menu_btn_bg"}>
             <Link className={"menu_btn"} to="/">

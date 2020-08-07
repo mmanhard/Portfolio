@@ -29,17 +29,17 @@ const IndexPage = () => {
 
       <div className={"column_ctr"} id={"home_container"}>
 
-        <div style={{ width: `400px`, borderRadius: 40, marginTop: 80, marginBottom: `1.45rem` }}>
+        <div id={"portrait"}>
           <Img style={{borderRadius: 40}} fluid={data.portrait.childImageSharp.fluid} />
         </div>
 
-        <h3 style={{width: 380, marginLeft: 20, textAlign: 'left'}}>My name is Michael Manhard.</h3>
+        <h3 className={"home_page_content"}>My name is Michael Manhard.</h3>
 
-        <p style={{width: 380, marginLeft: 20}}>
+        <p className={"home_page_content"}>
           I grew up, live, and work in and around Chicago.
         </p>
 
-        <p style={{width: 380, marginLeft: 20}}>
+        <p className={"home_page_content"}>
           A recent convert from structural engineering, I’m a resourceful engineer
           in the midst of getting his hands dirty designing and building software.
         </p>

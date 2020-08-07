@@ -29,7 +29,7 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
 }
 
 main {
@@ -636,8 +636,6 @@ pre tt:after {
   padding-left: 20px;
   padding-right: 20px;
   height: 10px;
-  margin-top: 20px;
-  margin-bottom: 20px;
 }
 
 .menu_btn_bg:hover {
@@ -709,8 +707,27 @@ pre tt:after {
   visibility: hidden;
 }
 
+.home_page_content {
+  width: 380px;
+  margin-left: 20px;
+  text-align: left;
+}
+
+#menu_btns {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 #home_container {
   width: 650px;
+}
+
+#portrait {
+  width: 400px;
+  margin-top: 80px;
+  margin-bottom: 1.45rem;
 }
 
 @media only screen and (max-width: 1199px){
@@ -799,6 +816,7 @@ pre tt:after {
 
   .menu_open {
     bottom: 0px;
+    width: 250px;
   }
 
   .menu_overlay {
@@ -808,5 +826,15 @@ pre tt:after {
 
   .sidebar {
     visibility: hidden;
+  }
+
+  .home_page_content {
+    width: 85%;
+  }
+
+  #portrait {
+    width: 85%;
+    margin-top: 40px;
+    margin-bottom: 1.45rem;
   }
 }
