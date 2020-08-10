@@ -13,9 +13,10 @@ const Resume = () => {
       <div className={"column_ctr title_container"}>
         <h1>RESUME.</h1>
       </div>
+
       <div id={'resume_container'}>
 
-        <header id={'resume_title'}>
+        <div id={'resume_title'}>
           <h2 id={'resume_name'}>MICHAEL MANHARD</h2>
           <div className={"menu_btn_bg column_ctr"}>
             <a href={resume}
@@ -23,54 +24,56 @@ const Resume = () => {
               DOWNLOAD
             </a>
           </div>
-        </header>
+        </div>
 
-        <h3>Work Experience</h3>
+        <div id={'resume_content'}>
+          <h3>Work Experience</h3>
 
-        <ResumeMainItem
-          org={'Calibrate Consulting, LLC'}
-          role={'Software Engineer'}
-          startDate={'Feb \'20'}
-          endDate={'Now'}
-          items={bulletPoints.calibrate}/>
+          <ResumeMainItem
+            org={'Calibrate Consulting, LLC'}
+            role={'Software Engineer'}
+            startDate={'Feb \'20'}
+            endDate={'Now'}
+            items={bulletPoints.calibrate}/>
 
-        <ResumeMainItem
-          org={'WSP USA'}
-          role={'Design Engineer'}
-          startDate={'Jan \'19'}
-          endDate={'Jan \'20'}
-          items={bulletPoints.wsp_eng}/>
+          <ResumeMainItem
+            org={'WSP USA'}
+            role={'Design Engineer'}
+            startDate={'Jan \'19'}
+            endDate={'Jan \'20'}
+            items={bulletPoints.wsp_eng}/>
 
-        <ResumeMainItem
-          org={'WSP USA'}
-          role={'Structural Designer'}
-          startDate={'Mar \'17'}
-          endDate={'Jan \'19'}
-          items={bulletPoints.wsp_design}/>
+          <ResumeMainItem
+            org={'WSP USA'}
+            role={'Structural Designer'}
+            startDate={'Mar \'17'}
+            endDate={'Jan \'19'}
+            items={bulletPoints.wsp_design}/>
 
-        <ResumeMainItem
-          org={'Tally App'}
-          role={'Software Engineer Intern'}
-          startDate={'Jun \'15'}
-          endDate={'Aug \'15'}
-          items={bulletPoints.tally}/>
+          <ResumeMainItem
+            org={'Tally App'}
+            role={'Software Engineer Intern'}
+            startDate={'Jun \'15'}
+            endDate={'Aug \'15'}
+            items={bulletPoints.tally}/>
 
-        <h3>Education</h3>
+          <h3>Education</h3>
 
-        <ResumeMainItem
-          org={'Stanford University'}
-          role={'MS in Structural Engineering'}
-          startDate={'Sep \'15'}
-          endDate={'Dec \'16'}
-          items={bulletPoints.stanford}/>
+          <ResumeMainItem
+            org={'Stanford University'}
+            role={'MS in Structural Engineering'}
+            startDate={'Sep \'15'}
+            endDate={'Dec \'16'}
+            items={bulletPoints.stanford}/>
 
-        <ResumeMainItem
-          org={'Princeton University'}
-          role={'BSE in Structural Engineering'}
-          startDate={'Sep \'11'}
-          endDate={'Jun \'15'}
-          items={bulletPoints.princeton}/>
+          <ResumeMainItem
+            org={'Princeton University'}
+            role={'BSE in Structural Engineering'}
+            startDate={'Sep \'11'}
+            endDate={'Jun \'15'}
+            items={bulletPoints.princeton}/>
 
+        </div>
       </div>
     </Layout>
   );
@@ -78,7 +81,7 @@ const Resume = () => {
 
 const ResumeMainItem = ({org, role, startDate, endDate, items}) => (
   <div style={{marginTop: 8, marginBottom: 8, width: '100%'}}>
-    <div style={{display: 'flex', width: '100%', flexDirection: 'row', justifyContent: 'space-between', flexWrap: 'wrap'}}>
+    <div className={'resume_item_title'}>
       <h5>
         {`${org} ${role ? `| ${role}` : ''}`}
       </h5>
