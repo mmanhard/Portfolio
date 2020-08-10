@@ -2,6 +2,7 @@ import { Link } from "gatsby"
 import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons"
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 
 const Sidebar = () => (
   <nav className={"sidebar"}>
@@ -10,6 +11,9 @@ const Sidebar = () => (
     </a>
     <a style={{margin: 10}} href="https://github.com/mmanhard/">
       <FontAwesomeIcon style={{width: 30, height: 30}} icon={faGithub} />
+    </a>
+    <a style={{margin: 10}} href="mailto:mmanhard93@gmail.com">
+      <FontAwesomeIcon style={{width: 27, height: 27, marginRight: 1}} icon={faEnvelope} />
     </a>
   </nav>
 )

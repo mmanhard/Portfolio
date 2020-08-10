@@ -33,6 +33,7 @@ header {
 }
 
 main {
+  background-color: #f8f8f8;
   position: absolute;
   min-height: 500px;
   top: 40px;
