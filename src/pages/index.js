@@ -33,7 +33,7 @@ const IndexPage = () => {
           <Img style={{borderRadius: 40}} fluid={data.portrait.childImageSharp.fluid} />
         </div>
 
-        <h3 className={"home_page_content"}>My name is Michael Manhard.</h3>
+        <h4 className={"home_page_content"}>My name is Michael Manhard.</h4>
 
         <p className={"home_page_content"}>
           I grew up, live, and work in and around Chicago.
