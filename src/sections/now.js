@@ -3,7 +3,7 @@ import React from "react"
 import Layout from "../components/layout"
 
 const Now = () => (
-  <Layout>
+  <section id={'now'}>
 
     <div id={"now_container"}>
 
@@ -28,7 +28,7 @@ const Now = () => (
       <h1>NOW.</h1>
     </div>
 
-  </Layout>
+  </section>
 )
 
 export default Now;

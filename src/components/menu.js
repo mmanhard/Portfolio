@@ -1,4 +1,3 @@
-import { Link } from "gatsby"
 import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faTimes } from "@fortawesome/free-solid-svg-icons"
@@ -17,27 +16,27 @@ const Menu = ({isOpen, toggleOpen}) => {
         <div id={"menu_btns"}>
 
           <div className={"column_ctr menu_btn_bg"}>
-            <Link className={"menu_btn"} to="/">
+            <a onClick={toggleOpen} className={"menu_btn"} href="/#home">
               HOME
-            </Link>
+            </a>
           </div>
 
           <div className={"column_ctr menu_btn_bg"}>
-            <Link className={"menu_btn"} to="/projects/">
+            <a onClick={toggleOpen} className={"menu_btn"} href="/#projects">
               PROJECTS
-            </Link>
+            </a>
           </div>
 
           <div className={"column_ctr menu_btn_bg"}>
-            <Link className={"menu_btn"} to="/now/">
+            <a onClick={toggleOpen} className={"menu_btn"} href="/#now">
               NOW
-            </Link>
+            </a>
           </div>
 
           <div className={"column_ctr menu_btn_bg"}>
-            <Link className={"menu_btn"} to="/resume/">
+            <a onClick={toggleOpen} className={"menu_btn"} href="/#resume">
               RESUME
-            </Link>
+            </a>
           </div>
 
         </div>

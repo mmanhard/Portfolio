@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 const Resume = () => {
 
   return (
-    <Layout>
+    <section id={'resume'}>
       <div className={"column_ctr title_container"}>
         <h1>RESUME.</h1>
       </div>
@@ -72,7 +72,7 @@ const Resume = () => {
 
         </div>
       </div>
-    </Layout>
+    </section>
   );
 }
 

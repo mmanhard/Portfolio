@@ -47,7 +47,7 @@ const Projects = () => {
   `);
 
   return (
-    <Layout>
+    <section id={'projects'}>
 
       <div id={"projects_container"}>
 
@@ -80,7 +80,7 @@ const Projects = () => {
                 text: "SOURCE (BE)",
               },
               {
-                href: "https://github.com/mmanhard/pain_control_backend",
+                href: "https://github.com/mmanhard/",
                 text: "SOURCE (BE)",
               }]} />
 
@@ -93,7 +93,7 @@ const Projects = () => {
               { section: "Front End",
                 tech: "React.JS",
               },
-              { section: "Front End",
+              { section: "Back End",
                 tech: "React.JS",
               }]}
           images={[data.touche_img_1, data.touche_img_2]}
@@ -112,7 +112,7 @@ const Projects = () => {
               { section: "Front End",
                 tech: "React.JS",
               },
-              { section: "Front End",
+              { section: "Back End",
                 tech: "React.JS",
               }]}
           images={[data.fresh_focus_img_1, data.fresh_focus_img_2]}
@@ -131,7 +131,7 @@ const Projects = () => {
               { section: "Front End",
                 tech: "React.JS",
               },
-              { section: "Front End",
+              { section: "Back End",
                 tech: "React.JS",
               }]}
           images={[data.pain_control_img]}
@@ -150,7 +150,7 @@ const Projects = () => {
         <h1>PROJECTS.</h1>
       </div>
 
-    </Layout>
+    </section>
   );
 }
 
@@ -161,7 +161,7 @@ const LandscapeProjectItem = ({title, description, techStack, image, links}) => 
         <h2>{title}</h2>
         <p>{description}</p>
         {techStack.map(({ section, tech}) => (
-          <p style={{marginBottom: 0}}>{`${section}:\t${tech}`}</p>
+          <p key={title + section} style={{marginBottom: 0}}>{`${section}:\t${tech}`}</p>
         ))}
       </div>
 
@@ -172,7 +172,7 @@ const LandscapeProjectItem = ({title, description, techStack, image, links}) => 
 
     <div>
       {links.map(({href, text}) => (
-        <a className={"project_btn"} href={href}>
+        <a key={href} className={"project_btn"} href={href}>
           <div className={"column_ctr"} style={{height: 16}}>VIEW</div>
           <div className={"column_ctr"} style={{height: 16}}>{text}</div>
         </a>
@@ -187,17 +187,17 @@ const PortraitProjectItem = ({title, description, techStack, images, links}) => 
       <h2>{title}</h2>
       <p>{description}</p>
       {techStack.map(({ section, tech}) => (
-        <p>{`${section}:\t${tech}`}</p>
+        <p key={title + section}>{`${section}:\t${tech}`}</p>
       ))}
       {links.map(({href, text}) => (
-        <a className={"project_btn"} href={href}>
+        <a key={href} className={"project_btn"} href={href}>
           <div className={"column_ctr"} style={{height: 16}}>VIEW</div>
           <div className={"column_ctr"} style={{height: 16}}>{text}</div>
         </a>
       ))}
     </div>
     {images.map((image, index) => (
-      <div className={index > 0 ? "second_img" : ""} style={{ width: `165px`, marginLeft: 20, marginBottom: `1.45rem` }}>
+      <div key={title + index} className={index > 0 ? "second_img" : ""} style={{ width: `165px`, marginLeft: 20, marginBottom: `1.45rem` }}>
         <Img className={"project_img"} fluid={image.childImageSharp.fluid} />
       </div>
     ))}
