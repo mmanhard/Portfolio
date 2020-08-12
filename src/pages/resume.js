@@ -1,7 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
 import resume from '../images/Resume.pdf'
 
 import Layout from "../components/layout"
