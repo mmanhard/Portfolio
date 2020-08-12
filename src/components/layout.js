@@ -27,8 +27,10 @@ class Layout extends React.Component {
 
     return (
       <>
-        <Header toggleMenu={this.toggleMenu}/>
-        <main>{children}</main>
+        <Header
+          closeMenu={() => { if (isMenuOpen) this.toggleMenu() }}
+          toggleMenu={this.toggleMenu}/>
+        <main id={"main_container"} onScroll={this._handleScroll}>{children}</main>
         {isMenuOpen && <div className={'menu_overlay'} />}
         <Menu
           isOpen={isMenuOpen}

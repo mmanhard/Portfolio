@@ -1,15 +1,15 @@
-import { Link } from "gatsby"
 import React from "react"
 
-const Header = ({ toggleMenu }) => {
+const Header = ({ toggleMenu, closeMenu }) => {
   return (
     <header>
-        <Link
+        <a
+          onClick={closeMenu}
           className={"nav_btn menu_btn_bg column_ctr"}
-          to="/"
+          href="/#home"
         >
           {`M M A N H A R D`}
-        </Link>
+        </a>
 
         <div className={"menu_header menu_btn_bg column_ctr"}>
           <button
