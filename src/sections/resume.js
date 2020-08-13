@@ -1,8 +1,6 @@
 import React from "react"
 import resume from '../images/Resume.pdf'
 
-import Layout from "../components/layout"
-
 const Resume = () => {
 
   return (

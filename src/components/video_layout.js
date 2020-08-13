@@ -14,6 +14,7 @@ const VideoLayout = ({ projectTitle, closeVideo }) => {
       <div className={'column_space video_content'}>
         <div id={"video_container"} style={{paddingTop: height, width}}>
           <iframe
+            title={projectTitle}
             src={projectToURL[projectTitle]}
             frameBorder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"

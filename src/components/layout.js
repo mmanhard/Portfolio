@@ -74,7 +74,7 @@ class Layout extends React.Component {
 
   _handleScroll = (e) => {
     const { isVideoOpen } = this.props;
-    const { curSection, intervalId, cameFromMenu } = this.state;
+    const { curSection, cameFromMenu } = this.state;
 
     const main = document.getElementById("main_container");
 
@@ -108,7 +108,7 @@ class Layout extends React.Component {
 
   render() {
     const { children, closeVideo } = this.props;
-    const { isMenuOpen, isVideoOpen, projectTitle } = this.state;
+    const { isMenuOpen } = this.state;
 
     return (
       <>
