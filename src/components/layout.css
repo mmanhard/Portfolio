@@ -44,7 +44,7 @@ main {
 
 section {
   width: 100%;
-  height: 111%;
+  height: 100%;
   display: flex;
   flex-direction: row;
   background-color: #f8f8f8;
@@ -396,7 +396,6 @@ li.resume {
 .title_container {
   background-color: #05386B;
   overflow: hidden;
-  padding-bottom: 10%;
 }
 
 .menu_header {
@@ -501,7 +500,6 @@ button.project_btn {
 
 #home_container {
   width: 650px;
-  padding-bottom: 10%;
 }
 
 #projects_container {
@@ -511,7 +509,6 @@ button.project_btn {
   justify-content: flex-start;
   align-items: flex-start;
   overflow: auto;
-  padding-bottom: 10%;
 }
 
 #video_container {
@@ -526,7 +523,6 @@ button.project_btn {
   justify-content: flex-start;
   align-items: flex-start;
   overflow: auto;
-  padding-bottom: 10%;
 }
 
 #resume_container {
@@ -644,7 +640,7 @@ button.project_btn {
 }
 
 @media only screen and (max-width: 799px){
-  main {
+  section {
     flex-direction: column;
     justify-content: flex-start;
   }
@@ -673,6 +669,8 @@ button.project_btn {
 
   .title_container {
     height: 70px;
+    width: 100%;
+    padding-bottom: 0;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -686,7 +684,6 @@ button.project_btn {
   }
 
   #home_container {
-    flex: 1;
     width: 100%;
   }
 
@@ -739,6 +736,12 @@ button.project_btn {
   .menu_open {
     bottom: 0px;
     width: 250px;
+  }
+
+  .video_overlay {
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
   }
 
   .menu_overlay {
