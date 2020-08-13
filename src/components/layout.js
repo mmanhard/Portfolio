@@ -32,10 +32,14 @@ class Layout extends React.Component {
     };
 
     this.isScrolling = false;
+    this.yStart = 0;
+    this.yEnd = 0;
   }
 
   componentDidMount() {
-    this.scrollListener = window.addEventListener("wheel", this._handleScroll);
+    this.scrollListener = document.addEventListener("wheel", this._handleScroll);
+    document.addEventListener('touchstart', this._handleTouchStart, false);
+    document.addEventListener('touchend', this._handleTouchEnd, false);
   }
 
   _scrollDownToSection = (main, nextSection) => {
@@ -72,18 +76,31 @@ class Layout extends React.Component {
     this.setState({intervalId: intervalId});
   }
 
+  _handleTouchStart = (e) => {
+    this.yStart = e.touches[0].clientY;
+  }
+
+  _handleTouchEnd = (e) => {
+    this.yEnd = e.changedTouches[0].clientY;
+    this._handleDelta(this.yStart-this.yEnd, 50);
+  }
+
   _handleScroll = (e) => {
+    this._handleDelta(e.deltaY, 5);
+  }
+
+  _handleDelta = (deltaY, threshold) => {
     const { isVideoOpen } = this.props;
     const { curSection, cameFromMenu } = this.state;
 
     const main = document.getElementById("main_container");
 
     if (!isVideoOpen && !this.isScrolling && !cameFromMenu) {
-      if (e.deltaY > 4 && nextSections[curSection]) {
+      if (deltaY > threshold && nextSections[curSection]) {
         const nextSection = document.getElementById(nextSections[curSection]);
         this.isScrolling = true;
         this._scrollDownToSection(main, nextSection);
-      } else if (e.deltaY < -4 && prevSections[curSection]) {
+      } else if (deltaY < (-1 * threshold) && prevSections[curSection]) {
         const prevSection = document.getElementById(prevSections[curSection]);
         this.isScrolling = true;
         this._scrollUpToSection(main, prevSection);
