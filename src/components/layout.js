@@ -28,6 +28,7 @@ class Layout extends React.Component {
       isMenuOpen: false,
       curSection: 'home',
       intervalId: undefined,
+      isVideoOpen: false,
     };
 
     this.isScrolling = false;
@@ -72,11 +73,12 @@ class Layout extends React.Component {
   }
 
   _handleScroll = (e) => {
+    const { isVideoOpen } = this.props;
     const { curSection, intervalId, cameFromMenu } = this.state;
 
     const main = document.getElementById("main_container");
 
-    if (!this.isScrolling && !cameFromMenu) {
+    if (!isVideoOpen && !this.isScrolling && !cameFromMenu) {
       if (e.deltaY > 4 && nextSections[curSection]) {
         const nextSection = document.getElementById(nextSections[curSection]);
         this.isScrolling = true;
@@ -92,26 +94,34 @@ class Layout extends React.Component {
   }
 
   toggleMenu = () => {
+    this.props.closeVideo();
     this.setState((prevState) => (
       { isMenuOpen: !prevState.isMenuOpen }
     ));
   }
 
   clickMenuItem = (curSection) => {
+    this.props.closeVideo();
     this.setState({cameFromMenu: true, curSection});
     this.toggleMenu();
   }
 
   render() {
-    const { children } = this.props;
-    const { isMenuOpen } = this.state;
+    const { children, closeVideo } = this.props;
+    const { isMenuOpen, isVideoOpen, projectTitle } = this.state;
 
     return (
       <>
         <Header
-          closeMenu={() => { if (isMenuOpen) this.toggleMenu() }}
+          closeMenu={() => {
+            closeVideo();
+            if (isMenuOpen) this.toggleMenu(); }}
           toggleMenu={this.toggleMenu}/>
-        <main id={"main_container"} onScroll={this._handleScroll}>{children}</main>
+        <main
+          id={"main_container"}
+          onScroll={this._handleScroll}>
+          {children}
+        </main>
         {isMenuOpen && <div className={'menu_overlay'} />}
         <Menu
           isOpen={isMenuOpen}
