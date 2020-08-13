@@ -5,7 +5,7 @@ import Img from "gatsby-image"
 import Layout from "../components/layout"
 import VideoLayout from "../components/video_layout"
 
-const Projects = () => {
+const Projects0 = () => {
   const data = useStaticQuery(graphql`
     query {
       pain_control_img: file(relativePath: { eq: "Pain-Control-1.png" }) {
@@ -47,47 +47,31 @@ const Projects = () => {
   `);
 
   return (
-    <section id={'projects'}>
+    <section id={'projects0'}>
 
       <div id={"projects_container"}>
-
-        <LandscapeProjectItem
-          title={"Pain Control"}
+      
+        <PortraitProjectItem
+          title={"Fresh Focus"}
           description={"Short description of what the app does goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas libero neque, lobortis eget interdum non, laoreet id nisi."}
           techStack={[
               { section: "Front End",
-                tech: "Javascript + React + Express",
+                tech: "React.JS",
               },
               { section: "Back End",
-                tech: "Python + Flask + MongoDB",
-              },
-              {
-                section: "Tooling",
-                tech: "Heroku + Webpack",
+                tech: "React.JS",
               }]}
-          image={data.pain_control_img}
+          images={[data.fresh_focus_img_1, data.fresh_focus_img_2]}
           links={[
               {
-                href: "http://mypaincontroller.com/",
-                text: "LIVE",
-              },
-              {
-                href: "https://github.com/mmanhard/pain_control_app",
-                text: "SOURCE (FE)",
-              },
-              {
-                href: "https://github.com/mmanhard/pain_control_backend",
-                text: "SOURCE (BE)",
-              },
-              {
-                href: "https://github.com/mmanhard/",
-                text: "SOURCE (BE)",
+                href: "https://github.com/mmanhard/FreshFocus",
+                text: "SOURCE",
               }]} />
 
         <hr />
 
         <PortraitProjectItem
-          title={"Touche"}
+          title={"This Portfolio"}
           description={"Short description of what the app does goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas libero neque, lobortis eget interdum non, laoreet id nisi."}
           techStack={[
               { section: "Front End",
@@ -96,12 +80,16 @@ const Projects = () => {
               { section: "Back End",
                 tech: "React.JS",
               }]}
-          images={[data.touche_img_1, data.touche_img_2]}
+          images={[data.pain_control_img]}
           links={[
+              { href: "http://mmanhard.com/",
+                text: "LIVE",
+              },
               {
-                href: "https://github.com/mmanhard/Touche",
+                href: "https://github.com/mmanhard/Portfolio",
                 text: "SOURCE",
               }]} />
+
       </div>
 
       <div className={"column_ctr title_container"}>
@@ -162,4 +150,4 @@ const PortraitProjectItem = ({title, description, techStack, images, links}) => 
   </div>
 )
 
-export default Projects;
+export default Projects0;
