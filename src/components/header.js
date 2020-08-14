@@ -11,10 +11,11 @@ const Header = ({ toggleMenu, closeMenu }) => {
           {`M M A N H A R D`}
         </a>
 
-        <div className={"menu_header menu_btn_bg column_ctr"}>
+        <div className={"menu_header menu_btn_bg"}>
           <button
             onClick={toggleMenu}
-            className={"nav_btn"}>
+            className={"nav_btn"}
+            style={{position: 'relative', top: -8}}>
             M E N U
           </button>
         </div>
