@@ -26,7 +26,7 @@ const Projects0 = ({ displayVideo }) => {
   return (
     <section id={'projects0'}>
 
-      <div className={"projects_container"}>
+      <div id={"projects0_container"} className={"projects_container"}>
 
         <PortraitProjectItem
           title={"Fresh Focus"}

@@ -82,11 +82,29 @@ class Layout extends React.Component {
 
   _handleTouchEnd = (e) => {
     this.yEnd = e.changedTouches[0].clientY;
-    this._handleDelta(this.yStart-this.yEnd, 50);
+    this._handleDelta(this.yStart-this.yEnd, 5000);
   }
 
   _handleScroll = (e) => {
-    this._handleDelta(e.deltaY, 5);
+    const { curSection } = this.state;
+
+    if (curSection === 'projects') {
+      const {scrollHeight, scrollTop, clientHeight} = document.getElementById("projects_container");
+      const scrollLeft = scrollHeight - scrollTop - clientHeight;
+
+      if ((scrollLeft <= 0 && e.deltaY > 0) || (scrollTop <= 0 && e.deltaY < 0)) {
+        this._handleDelta(e.deltaY, 5);
+      }
+    } else if (curSection === 'projects0') {
+      const {scrollHeight, scrollTop, clientHeight} = document.getElementById("projects0_container");
+      const scrollLeft = scrollHeight - scrollTop - clientHeight;
+
+      if ((scrollLeft <= 0 && e.deltaY > 0) || (scrollTop <= 0 && e.deltaY < 0)) {
+        this._handleDelta(e.deltaY, 5);
+      }
+    } else {
+      this._handleDelta(e.deltaY, 5);
+    }
   }
 
   _handleDelta = (deltaY, threshold) => {
