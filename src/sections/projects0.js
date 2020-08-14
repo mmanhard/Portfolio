@@ -8,14 +8,14 @@ const Projects0 = ({ displayVideo }) => {
     query {
       fresh_focus_img_1: file(relativePath: { eq: "Fresh-Focus-1.png" }) {
         childImageSharp {
-          fluid(maxWidth: 800) {
+          fluid(maxHeight: 400) {
             ...GatsbyImageSharpFluid
           }
         }
       },
       fresh_focus_img_2: file(relativePath: { eq: "Fresh-Focus-2.png" }) {
         childImageSharp {
-          fluid(maxWidth: 800) {
+          fluid(maxHeight: 400) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -26,7 +26,7 @@ const Projects0 = ({ displayVideo }) => {
   return (
     <section id={'projects0'}>
 
-      <div id={"projects_container"}>
+      <div className={"projects_container"}>
 
         <PortraitProjectItem
           title={"Fresh Focus"}

@@ -23,9 +23,9 @@ const Home = () => {
 
       <div className={"column_ctr"} id={"home_container"}>
 
-      <div id={"portrait"}>
-        <Img style={{borderRadius: 40}} fluid={data.portrait.childImageSharp.fluid} />
-      </div>
+        <div id={"portrait"}>
+          <Img style={{borderRadius: 40}} fluid={data.portrait.childImageSharp.fluid} />
+        </div>
 
 
         <h4 className={"home_page_content"}>My name is Michael Manhard.</h4>

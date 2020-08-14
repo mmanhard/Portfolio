@@ -34,7 +34,7 @@ const Projects = ({ displayVideo }) => {
   return (
     <section id={'projects'}>
 
-      <div id={"projects_container"}>
+      <div className={"projects_container"}>
 
         <LandscapeProjectItem
           title={"Pain Control"}
