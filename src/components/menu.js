@@ -16,34 +16,31 @@ const Menu = ({isOpen, toggleOpen, clickMenuItem}) => {
         <div id={"menu_btns"}>
 
           <div className={"column_ctr menu_btn_bg"}>
-            <a onClick={() => { clickMenuItem('home') }}
-              className={"menu_btn"}
-              href="/#home">
+            <button onClick={() => { clickMenuItem('home') }}
+              className={"menu_btn"}>
               HOME
-            </a>
+            </button>
           </div>
 
           <div className={"column_ctr menu_btn_bg"}>
-            <a onClick={() => { clickMenuItem('projects') }}
-              className={"menu_btn"}
-              href="/#projects">
+            <button onClick={() => { clickMenuItem('projects') }}
+              className={"menu_btn"}>
               PROJECTS
-            </a>
+            </button>
           </div>
 
           <div className={"column_ctr menu_btn_bg"}>
-            <a onClick={() => { clickMenuItem('now') }}
-              className={"menu_btn"}
-              href="/#now">
+            <button onClick={() => { clickMenuItem('now') }}
+              className={"menu_btn"}>
               NOW
-            </a>
+            </button>
           </div>
 
           <div className={"column_ctr menu_btn_bg"}>
-            <a onClick={() => { clickMenuItem('resume') }}
-              className={"menu_btn"} href="/#resume">
+            <button onClick={() => { clickMenuItem('resume') }}
+              className={"menu_btn"}>
               RESUME
-            </a>
+            </button>
           </div>
 
         </div>

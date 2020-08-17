@@ -1,15 +1,13 @@
 import React from "react"
 
-const Header = ({ toggleMenu, closeMenu }) => {
+const Header = ({ toggleMenu, clickHome }) => {
   return (
     <header>
-        <a
-          onClick={closeMenu}
-          className={"nav_btn menu_btn_bg column_ctr"}
-          href="/#home"
-        >
+        <button
+          onClick={clickHome}
+          className={"nav_btn menu_btn_bg column_ctr"}>
           {`M M A N H A R D`}
-        </a>
+        </button>
 
         <div className={"menu_header menu_btn_bg"}>
           <button

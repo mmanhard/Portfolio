@@ -39,7 +39,9 @@ main {
   left: 40px;
   right: 40px;
   bottom: 40px;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
 section {
@@ -48,6 +50,9 @@ section {
   display: flex;
   flex-direction: row;
   background-color: #f8f8f8;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
 article,
