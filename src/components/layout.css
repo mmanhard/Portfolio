@@ -468,7 +468,7 @@ li.resume {
   margin-left: 40px;
   margin-right: 20px;
   margin-top: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .landscape_content {
@@ -492,8 +492,8 @@ li.resume {
 .portrait_container {
   margin-left: 40px;
   margin-right: 20px;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -501,6 +501,10 @@ li.resume {
 
 .portait_content {
   flex: 1;
+}
+
+.portrait_btns {
+  margin-top: 10px;
 }
 
 .not_visible_small {
@@ -515,7 +519,6 @@ li.resume {
 .portrait_img {
   width: 150px;
   margin-left: 20px;
-  margin-bottom: 1.45rem;
 }
 
 button.project_btn,
@@ -863,6 +866,10 @@ a.sidebar_btn:hover::before {
     margin-bottom: 10px;
   }
 
+  .portrait_btns {
+    margin-top: 0;
+  }
+
   .second_img {
     display: block;
   }
@@ -881,6 +888,7 @@ a.sidebar_btn:hover::before {
     display: flex;
     width: 100%;
     justify-content: center;
+    margin-top: 12px;
   }
 
   #home_container {
