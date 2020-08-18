@@ -137,7 +137,7 @@ const Projects = ({ displayVideo, allowScroll }) => {
                 section: "Deployment",
                 tech: "AWS S3",
               }]}
-          images={[data.pain_control_img]}
+          images={[]}
           links={[
               { href: "http://mmanhard.com/",
                 text: "LIVE",
