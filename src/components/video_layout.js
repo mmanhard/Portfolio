@@ -35,7 +35,7 @@ VideoLayout.propTypes = {
 
 const projectToURL = {
   'Pain Control': "https://www.youtube.com/embed/md52E5fJaUE?autoplay=1",
-  'Touche': "https://www.youtube.com/embed/md52E5fJaUE?autoplay=1",
+  'Touché': "https://www.youtube.com/embed/md52E5fJaUE?autoplay=1",
   'Fresh Focus': "https://www.youtube.com/embed/yAW-TZSDn6A?autoplay=1"
 }
 
@@ -44,7 +44,7 @@ const projectDimRatios = {
     height: '60%',
     width: '90%',
   },
-  'Touche': {
+  'Touché': {
     height: '60%',
     width: '90%',
   },
