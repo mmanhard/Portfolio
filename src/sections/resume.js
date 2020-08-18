@@ -13,12 +13,10 @@ const Resume = () => {
 
         <div id={'resume_title'}>
           <h2 id={'resume_name'}>MICHAEL MANHARD</h2>
-          <div className={"menu_btn_bg column_ctr"}>
-            <a href={resume}
-              id={"download_btn"} download>
-              DOWNLOAD
-            </a>
-          </div>
+          <a href={resume}
+            id={"download_btn"} className={"nav_btn"} download>
+            DOWNLOAD
+          </a>
         </div>
 
         <div id={'resume_content'}>

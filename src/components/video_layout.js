@@ -21,7 +21,7 @@ const VideoLayout = ({ projectTitle, closeVideo }) => {
             allowFullScreen={true} />
         </div>
         <h1 style={{marginBottom: 20}}>{projectTitle}</h1>
-        <button onClick={closeVideo} style={{marginBottom: 20}}>
+        <button id={"video_close_btn"} onClick={closeVideo} style={{marginBottom: 20}}>
           <FontAwesomeIcon style={{width: 30, height: 30, color: '#fff'}} icon={faTimesCircle} />
         </button>
       </div>

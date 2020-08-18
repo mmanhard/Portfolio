@@ -17,7 +17,7 @@ const LandscapeProjectItem = ({title, description, techStack, image, links, disp
       </div>}
     </div>
 
-    <div className={"row_space"} style={{flexWrap: 'wrap'}}>
+    <div className={"row_space"} style={{flexWrap: 'wrap', marginBottom: 0}}>
       {links.map(({href, text}) => (
         <a key={href} className={"project_btn"} href={href}>
           <div className={"column_ctr"} style={{height: 16}}>VIEW</div>

@@ -15,37 +15,25 @@ const Menu = ({isOpen, toggleOpen, clickMenuItem}) => {
 
         <div id={"menu_btns"}>
 
-          <div className={"menu_btn_bg"}>
-            <button onClick={() => { clickMenuItem('home') }}
-              className={"menu_btn"}
-              style={{position: 'relative', top: -26}}>
-              HOME
-            </button>
-          </div>
+          <button onClick={() => { clickMenuItem('home') }}
+            className={"menu_btn"}>
+            HOME
+          </button>
 
-          <div className={"menu_btn_bg"}>
-            <button onClick={() => { clickMenuItem('projects') }}
-              className={"menu_btn"}
-              style={{position: 'relative', top: -26}}>
-              PROJECTS
-            </button>
-          </div>
+          <button onClick={() => { clickMenuItem('projects') }}
+            className={"menu_btn"}>
+            PROJECTS
+          </button>
 
-          <div className={"menu_btn_bg"}>
-            <button onClick={() => { clickMenuItem('now') }}
-              className={"menu_btn"}
-              style={{position: 'relative', top: -26}}>
-              NOW
-            </button>
-          </div>
+          <button onClick={() => { clickMenuItem('now') }}
+            className={"menu_btn"}>
+            NOW
+          </button>
 
-          <div className={"menu_btn_bg"}>
-            <button onClick={() => { clickMenuItem('resume') }}
-              className={"menu_btn"}
-              style={{position: 'relative', top: -26}}>
-              RESUME
-            </button>
-          </div>
+          <button onClick={() => { clickMenuItem('resume') }}
+            className={"menu_btn"}>
+            RESUME
+          </button>
 
         </div>
       </nav>

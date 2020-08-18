@@ -5,14 +5,14 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 
 const Sidebar = () => (
   <nav className={"sidebar"}>
-    <a style={{margin: 10}} href="https://www.linkedin.com/in/michael-m-manhard/">
-      <FontAwesomeIcon style={{width: 30, height: 30}} icon={faLinkedin} />
+    <a className={"sidebar_btn column_ctr"} href="https://www.linkedin.com/in/michael-m-manhard/">
+      <FontAwesomeIcon style={{width: 28, height: 28}} icon={faLinkedin} />
     </a>
-    <a style={{margin: 10}} href="https://github.com/mmanhard/">
-      <FontAwesomeIcon style={{width: 30, height: 30}} icon={faGithub} />
+    <a className={"sidebar_btn column_ctr"} href="https://github.com/mmanhard/">
+      <FontAwesomeIcon style={{width: 28, height: 28}} icon={faGithub} />
     </a>
-    <a style={{margin: 10}} href="mailto:mmanhard93@gmail.com">
-      <FontAwesomeIcon style={{width: 27, height: 27, marginRight: 1}} icon={faEnvelope} />
+    <a className={"sidebar_btn column_ctr"} href="mailto:mmanhard93@gmail.com">
+      <FontAwesomeIcon style={{width: 26, height: 26}} icon={faEnvelope} />
     </a>
   </nav>
 )
