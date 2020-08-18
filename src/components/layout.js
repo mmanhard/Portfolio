@@ -67,9 +67,14 @@ class Layout extends React.Component {
 
   goToSection = (section) => {
     const main = document.getElementById('main_container');
+    const content = document.getElementById(`${section}_container`);
 
     main.scrollTo({
       top: (400 + main.clientHeight) * sectionMap[section]
+    });
+
+    content.scrollTo({
+      top: 0
     });
   }
 

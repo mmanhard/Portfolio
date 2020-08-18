@@ -448,6 +448,7 @@ li.resume {
   justify-content: flex-start;
   align-items: flex-start;
   overflow: auto;
+  scroll-behavior: smooth;
 }
 
 #resume_container.no_scroll,
@@ -641,6 +642,8 @@ a.sidebar_btn:hover::before {
 
 #home_container {
   width: 650px;
+  overflow: auto;
+  scroll-behavior: smooth;
 }
 
 #video_container {
@@ -655,6 +658,7 @@ a.sidebar_btn:hover::before {
   justify-content: flex-start;
   align-items: flex-start;
   overflow: auto;
+  scroll-behavior: smooth;
 }
 
 #now_anchor {
@@ -670,6 +674,7 @@ a.sidebar_btn:hover::before {
   width: 750px;
   position: relative;
   overflow: auto;
+  scroll-behavior: smooth;
 }
 
 #resume_content {
