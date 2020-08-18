@@ -597,6 +597,13 @@ a.sidebar_btn:hover::before {
     opacity: 1;
 }
 
+.now_page_small_header {
+  width: 80%;
+  text-align: left;
+  margin-left: 40px;
+  margin-bottom: 10px;
+}
+
 .now_page_content {
   width: 80%;
   text-align: left;
@@ -641,6 +648,14 @@ a.sidebar_btn:hover::before {
   justify-content: flex-start;
   align-items: flex-start;
   overflow: auto;
+}
+
+#now_anchor {
+  margin-top: -60px;
+  margin-bottom: 60px;
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.67rem;
 }
 
 #resume_container {

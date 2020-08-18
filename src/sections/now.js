@@ -7,23 +7,50 @@ const Now = () => (
 
       <h2 className={"now_page_content"}>August 7th, 2020</h2>
 
-      <p className={"now_page_content"}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas libero neque, lobortis eget interdum non, laoreet id nisi. Cras in arcu non dui blandit efficitur. Etiam ante ex, aliquam blandit auctor ut, consequat a dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+      <h5 className={"now_page_small_header"}>WORKING</h5>
+
+      <p className={"now_page_content"} style={{marginBottom: 10}}>
+        I left the field of structural engineering in January to pursue software engineering. Since then, I’ve been working part-time with Calibrate Consulting while I study and build the projects you’ve seen in this portfolio.
       </p>
 
       <p className={"now_page_content"}>
-        Cras eu lectus semper, vestibulum magna id, pellentesque nibh. Phasellus lacinia venenatis facilisis. Aliquam non velit ac risus vestibulum ultricies. Suspendisse porttitor feugiat sodales. Vestibulum eget turpis in leo hendrerit pharetra non a justo. Nulla dictum purus sit amet pretium mollis. Mauris pellentesque metus id lacus blandit luctus.
+        I’m now focused on getting a full-time role as a software engineer.
+      </p>
+
+      <h5 className={"now_page_small_header"}>STUDYING</h5>
+
+      <p className={"now_page_content"}>
+        Reading and taking online classes about databases, particularly PostgreSQL, and system design.
+      </p>
+
+      <h5 className={"now_page_small_header"}>LIVING</h5>
+
+      <p className={"now_page_content"}>
+        Still in Chicago. Buckling down since March.
+      </p>
+
+      <h5 className={"now_page_small_header"}>DOING</h5>
+
+      <p className={"now_page_content"} style={{marginBottom: 10}}>
+        My decision to grow peppers last summer spiraled into a full rooftop garden this year. Just made a batch of salsa verde and started some pepper ferments this past weekend.
       </p>
 
       <p className={"now_page_content"}>
-        Integer quis pulvinar dui. Vestibulum posuere urna quis condimentum laoreet. Duis nec consequat nunc. Ut pellentesque, velit eu tempor rutrum, ante diam viverra leo, sit amet dictum nulla neque vitae velit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        Also:
+        <ul>
+          <li>Training our new puppy, Plato.</li>
+          <li>Riding my bike to swim in Lake Michigan.</li>
+          <li>Learning how to cut my own hair (terribly).</li>
+        </ul>
       </p>
+
 
 
     </div>
 
     <div className={"column_ctr title_container"}>
       <h1>NOW.</h1>
+      <a id={"now_anchor"} href={"https://nownownow.com/about"}>What is this?</a>
     </div>
 
   </section>
