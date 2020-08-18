@@ -66,6 +66,29 @@ const Resume = () => {
             endDate={'Jun \'15'}
             items={bulletPoints.princeton}/>
 
+          <h3>Activities</h3>
+
+          <ResumeMainItem
+            org={'ACE Mentor Program of America'}
+            role={'Mentor'}
+            startDate={'Nov \'17'}
+            endDate={'Jan \'20'}
+            items={bulletPoints.ace}/>
+
+          <ResumeMainItem
+            org={'WSP Developing Professionals Network'}
+            role={'Office Co-Leader'}
+            startDate={'Jan \'18'}
+            endDate={'Jan \'20'}
+            items={bulletPoints.dpn}/>
+
+          <ResumeMainItem
+            org={'Princeton Varsity Men\'s Swimming & Diving'}
+            role={'Diving Team Member'}
+            startDate={'Sep \'11'}
+            endDate={'Mar \'15'}
+            items={bulletPoints.pucsdt}/>
+
         </div>
       </div>
     </section>
@@ -116,7 +139,16 @@ const bulletPoints = {
     'Academic Honors: Summa Cum Laude, George Mueller Engineer-Athlete Award; David Carmichael Thesis Prize; NJ ACI Civil Engineering Scholarship; Phi Beta Kappa, Sigma Xi, and Tau Beta Pi Honor Societies',
     'Relevant Coursework: Algorithms & Data Structures, Programming Systems, Functional Programming, Computing for the Physical and Social Sciences, Advanced Programming Techniques'
   ],
-
+  ace: [
+    'Mentored high school students interested in the fields of architecture, construction, and engineering.',
+  ],
+  dpn: [
+    'Increased engagement in WSP’s career growth network by formation of a technical development committee.'
+  ],
+  pucsdt: [
+    '1-Meter School Record Holder',
+    '4-Time Academic All-American Honorable Mention'
+  ]
 }
 
 export default Resume;
