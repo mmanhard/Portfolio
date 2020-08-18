@@ -12,8 +12,33 @@ class Layout extends React.Component {
 
     this.state = {
       isMenuOpen: false,
-      isVideoOpen: false,
+      isVideoOpen: false
     };
+  }
+
+  componentDidMount() {
+    const main = document.getElementById('main_container');
+    this.scrollListener = main.addEventListener("scroll", this.handleScroll);
+  }
+
+  handleScroll = (e) => {
+    const { allowProjectScroll, allowResumeScroll } = this.props;
+
+    const main = document.getElementById("main_container");
+    const projectOriginTop = (400 + main.clientHeight) * sectionMap['projects'];
+    const resumeOriginTop = (400 + main.clientHeight) * sectionMap['resume'];
+
+    if (allowProjectScroll && main.scrollTop < projectOriginTop) {
+      this.props.setProjectScroll(false);
+    } else if (!allowProjectScroll && main.scrollTop >= projectOriginTop) {
+      this.props.setProjectScroll(true);
+    }
+
+    if (allowResumeScroll && main.scrollTop < resumeOriginTop) {
+      this.props.setResumeScroll(false);
+    } else if (!allowResumeScroll && main.scrollTop >= resumeOriginTop) {
+      this.props.setResumeScroll(true);
+    }
   }
 
   toggleMenu = () => {
@@ -44,12 +69,12 @@ class Layout extends React.Component {
     const main = document.getElementById('main_container');
 
     main.scrollTo({
-      top: main.clientHeight * sectionMap[section]
+      top: (400 + main.clientHeight) * sectionMap[section]
     });
   }
 
   render() {
-    const { children, closeVideo } = this.props;
+    const { children } = this.props;
     const { isMenuOpen } = this.state;
 
     return (
@@ -58,8 +83,7 @@ class Layout extends React.Component {
           clickHome={this.clickHome}
           toggleMenu={this.toggleMenu}/>
         <main
-          id={"main_container"}
-          onScroll={this._handleScroll}>
+          id={"main_container"}>
           {children}
         </main>
         <div id={"menu_overlay"} className={isMenuOpen ? 'menu_overlay_open' : ''} />

@@ -15,6 +15,8 @@ class IndexPage extends React.Component {
     this.state = {
       projectTitle: undefined,
       isVideoOpen: false,
+      projectScroll: false,
+      resumeScroll: false,
     };
 
   }
@@ -27,17 +29,31 @@ class IndexPage extends React.Component {
     this.setState({ projectTitle: undefined, isVideoOpen: false });
   }
 
+  setProjectScroll = (allowScroll) => {
+    this.setState({ projectScroll: allowScroll });
+  }
+
+  setResumeScroll = (allowScroll) => {
+    this.setState({ resumeScroll: allowScroll });
+  }
+
   render() {
-    const { isVideoOpen, projectTitle } = this.state;
+    const { isVideoOpen, projectTitle, projectScroll, resumeScroll } = this.state;
 
 
     return (
-      <Layout isVideoOpen={isVideoOpen} closeVideo={this.closeVideo}>
+      <Layout
+        isVideoOpen={isVideoOpen}
+        closeVideo={this.closeVideo}
+        allowProjectScroll={projectScroll}
+        setProjectScroll={this.setProjectScroll}
+        allowResumeScroll={resumeScroll}
+        setResumeScroll={this.setResumeScroll}>
 
         <Home />
-        <Projects displayVideo={this.displayVideo} />
+        <Projects allowScroll={projectScroll} displayVideo={this.displayVideo} />
         <Now />
-        <Resume />
+        <Resume allowScroll={resumeScroll} />
 
         {(isVideoOpen && projectTitle) &&
           <VideoLayout

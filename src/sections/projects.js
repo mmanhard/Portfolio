@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import LandscapeProjectItem from "../components/landscape_project_item"
 import PortraitProjectItem from "../components/portrait_project_item"
 
-const Projects = ({ displayVideo }) => {
+const Projects = ({ displayVideo, allowScroll }) => {
   const data = useStaticQuery(graphql`
     query {
       pain_control_img: file(relativePath: { eq: "Pain-Control-1.png" }) {
@@ -48,7 +48,7 @@ const Projects = ({ displayVideo }) => {
   return (
     <section id={'projects'}>
 
-      <div id={"projects_container"} className={"projects_container"}>
+      <div id={"projects_container"} className={allowScroll ? "projects_container" : "projects_container no_scroll"}>
 
         <LandscapeProjectItem
           title={"Pain Control"}

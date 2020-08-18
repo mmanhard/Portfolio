@@ -1,7 +1,7 @@
 import React from "react"
 import resume from '../images/Resume.pdf'
 
-const Resume = () => {
+const Resume = ({ allowScroll }) => {
 
   return (
     <section id={'resume'}>
@@ -9,7 +9,7 @@ const Resume = () => {
         <h1>RESUME.</h1>
       </div>
 
-      <div id={'resume_container'}>
+      <div id={'resume_container'} className={allowScroll ? "" : "no_scroll"}>
 
         <div id={'resume_title'}>
           <h2 id={'resume_name'}>MICHAEL MANHARD</h2>
