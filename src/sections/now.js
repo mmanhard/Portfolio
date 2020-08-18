@@ -5,7 +5,7 @@ const Now = () => (
 
     <div id={"now_container"}>
 
-      <h2 className={"now_page_content"}>August 7th, 2020</h2>
+      <h2 className={"now_page_content"}>August 18th, 2020</h2>
 
       <h5 className={"now_page_small_header"}>WORKING</h5>
 
