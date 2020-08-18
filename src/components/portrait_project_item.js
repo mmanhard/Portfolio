@@ -1,16 +1,21 @@
 import React from "react"
 import Img from "gatsby-image"
 
-const PortraitProjectItem = ({title, description, techStack, images, links, displayVideo}) => (
+const PortraitProjectItem = ({title, platform, description, techStack, images, links, displayVideo}) => (
   <div className={"portrait_container"}>
     <div className={"portait_content"}>
 
-      <h2>{title}</h2>
+      <h2>{title}<span>{platform}</span></h2>
 
-      <p>{description}</p>
+      <p className={"project_description"}>{description}</p>
 
       {techStack.map(({ section, tech}) => (
-        <p key={title + section}>{`${section}:\t${tech}`}</p>
+        <p key={title + section}
+          className={"project_description"}
+          style={{marginBottom: 0}}>
+          <span>{`${section}:    `}</span>
+          <strong>{tech}</strong>
+        </p>
       ))}
 
       <div className={'visible_small'}>

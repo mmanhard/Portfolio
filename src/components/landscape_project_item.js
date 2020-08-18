@@ -1,14 +1,19 @@
 import React from "react"
 import Img from "gatsby-image"
 
-const LandscapeProjectItem = ({title, description, techStack, image, links, displayVideo}) => (
+const LandscapeProjectItem = ({title, platform, description, techStack, image, links, displayVideo}) => (
   <div className={"column_ctr landscape_container"}>
     <div className={"landscape_content"}>
       <div className={"landscape_description"}>
-        <h2>{title}</h2>
-        <p>{description}</p>
+        <h2>{title}<span>{platform}</span></h2>
+        <p className={"project_description"}>{description}</p>
         {techStack.map(({ section, tech}) => (
-          <p key={title + section} style={{marginBottom: 0}}>{`${section}:\t${tech}`}</p>
+          <p key={title + section}
+            className={"project_description"}
+            style={{marginBottom: 0}}>
+            <span>{`${section}:    `}</span>
+            <strong>{tech}</strong>
+          </p>
         ))}
       </div>
 

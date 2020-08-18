@@ -152,7 +152,6 @@ h2 {
   font-weight: 700;
   text-rendering: optimizeLegibility;
   font-size: 1.33rem;
-  text-decoration: underline;
 }
 
 h3 {
@@ -267,6 +266,11 @@ strong {
 
 p *:last-child {
   margin-bottom: 0;
+}
+
+h2 span {
+  margin-left: 8px;
+  font-size: 0.78rem;
 }
 
 li.resume {
@@ -439,6 +443,10 @@ li.resume {
 
 .project_img {
   box-shadow: 1px 2px 6px 2px #ccc;
+}
+
+.project_description {
+  font-weight: 400;
 }
 
 .landscape_container {

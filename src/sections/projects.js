@@ -38,7 +38,8 @@ const Projects = ({ displayVideo }) => {
 
         <LandscapeProjectItem
           title={"Pain Control"}
-          description={"Short description of what the app does goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas libero neque, lobortis eget interdum non, laoreet id nisi."}
+          platform={"Web App"}
+          description={"Pain Control gives users the ability to track their pain levels over time. Users enter their pain levels over the course of a day. Pain Control maps out how each of the user's pain points have changed throughout the day and over time. This information empowers users by helping them make insights about their pain and giving them an effective tool to communicate their pain history to doctors."}
           techStack={[
               { section: "Front End",
                 tech: "Javascript + React + Express",
@@ -47,7 +48,7 @@ const Projects = ({ displayVideo }) => {
                 tech: "Python + Flask + MongoDB",
               },
               {
-                section: "Tooling",
+                section: "Tools",
                 tech: "Heroku + Webpack",
               }]}
           image={data.pain_control_img}
@@ -69,14 +70,15 @@ const Projects = ({ displayVideo }) => {
         <hr />
 
         <PortraitProjectItem
-          title={"Touche"}
-          description={"Short description of what the app does goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas libero neque, lobortis eget interdum non, laoreet id nisi."}
+          title={"Touché"}
+          platform={"iOS App"}
+          description={"Ever been at dinner with friends and someone asks, \"Are hot dogs sandwiches, tacos, or something else entirely?\". Google doesn't have an answer for that, so that's where Touché comes in. Type in a question, get votes from people like you, prove your friends you were right. Touché."}
           techStack={[
               { section: "Front End",
-                tech: "React.JS",
+                tech: "Swift",
               },
               { section: "Back End",
-                tech: "React.JS",
+                tech: "Python +  Flask + PostgreSQL",
               }]}
           images={[data.touche_img_1, data.touche_img_2]}
           links={[

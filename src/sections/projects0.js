@@ -30,13 +30,11 @@ const Projects0 = ({ displayVideo }) => {
 
         <PortraitProjectItem
           title={"Fresh Focus"}
-          description={"Short description of what the app does goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas libero neque, lobortis eget interdum non, laoreet id nisi."}
+          platform={"Chrome Extension"}
+          description={"Fresh Focus implements the Pomodoro method but takes it one step further: website blocking while in the middle of a session. Configure your Pomodoro session, start the timer, and your most distracting sites will be out of reach until the timer is done."}
           techStack={[
-              { section: "Front End",
-                tech: "React.JS",
-              },
-              { section: "Back End",
-                tech: "React.JS",
+              { section: "Built With",
+                tech: "Vanilla JS + CSS + HTML",
               }]}
           images={[data.fresh_focus_img_1, data.fresh_focus_img_2]}
           links={[
@@ -50,13 +48,18 @@ const Projects0 = ({ displayVideo }) => {
 
         <PortraitProjectItem
           title={"This Portfolio"}
-          description={"Short description of what the app does goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas libero neque, lobortis eget interdum non, laoreet id nisi."}
+          platform={"Web App"}
+          description={"This portfolio was built with the sole intention of showing my skills in the field of software engineering. It's built with GatsbyJS for one reason: speed. At build time, this site is rendered to static HTML and CSS. Once a user visits the site, a pre-packaged Javascript bundle is loaded asynchonously. Images are lazy loaded and queried using GraphQL."}
           techStack={[
               { section: "Front End",
-                tech: "React.JS",
+                tech: "React.JS + Gatsby",
               },
-              { section: "Back End",
-                tech: "React.JS",
+              { section: "Database",
+                tech: "GraphQL",
+              },
+              {
+                section: "Deployment",
+                tech: "AWS S3",
               }]}
           images={[data.pain_control_img]}
           links={[
