@@ -343,7 +343,7 @@ li.resume {
   transform: scale(1,1);
 }
 
-.menu {
+#menu {
   position: fixed;
   min-height: 500px;
   top: 40px;
@@ -355,9 +355,11 @@ li.resume {
   justify-content: center;
   align-items: center;
   background: #fff;
+  z-index: 10;
+  transition: width 0.5s;
 }
 
-.menu_overlay {
+#menu_overlay {
   background-color: #05386b;
   position: fixed;
   min-height: 500px;
@@ -365,22 +367,23 @@ li.resume {
   left: 40px;
   right: 40px;
   bottom: 40px;
-  z-index: 2;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
-.menu_open {
-  position: fixed;
-  min-height: 500px;
-  top: 40px;
-  left: 0px;
-  bottom: 40px;
+#menu.menu_open {
   width: 280px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  background: #fff;
-  z-index: 10;
+  transition: width 0.5s;
+}
+
+#menu_overlay.menu_overlay_open {
+  opacity: 0.85;
+  z-index: 2;
 }
 
 .video_overlay {
@@ -898,7 +901,7 @@ a.sidebar_btn:hover::before {
     text-align: left;
   }
 
-  .menu_open {
+  #menu.menu_open {
     bottom: 0px;
     width: 250px;
   }
@@ -909,7 +912,7 @@ a.sidebar_btn:hover::before {
     left: 0px;
   }
 
-  .menu_overlay {
+  #menu_overlay {
     bottom: 0px;
     right: 0px;
   }

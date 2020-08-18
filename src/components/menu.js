@@ -4,9 +4,10 @@ import { faTimes } from "@fortawesome/free-solid-svg-icons"
 
 const Menu = ({isOpen, toggleOpen, clickMenuItem}) => {
 
+  let content;
   if (isOpen) {
-    return (
-      <nav className={"menu_open"}>
+    content = (
+      <>
         <button
           onClick={toggleOpen}
           id={"menu_nav_btn"} className={"nav_btn"}>
@@ -36,21 +37,25 @@ const Menu = ({isOpen, toggleOpen, clickMenuItem}) => {
           </button>
 
         </div>
-      </nav>
+      </>
     );
 
   } else {
-    return (
-      <nav className={"menu"}>
-        <div className={"rotate_neg_90 menu_btn_bg column_ctr"}>
-          <button
-            onClick={toggleOpen} className={"nav_btn"}>
-            MENU
-          </button>
-        </div>
-      </nav>
+    content = (
+      <div className={"rotate_neg_90 menu_btn_bg column_ctr"}>
+        <button
+          onClick={toggleOpen} className={"nav_btn"}>
+          MENU
+        </button>
+      </div>
     );
   }
+
+  return (
+    <nav id={"menu"} className={isOpen ? "menu_open" : 'menu'}>
+      {content}
+    </nav>
+  )
 
 }
 

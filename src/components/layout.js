@@ -174,7 +174,7 @@ class Layout extends React.Component {
           onScroll={this._handleScroll}>
           {children}
         </main>
-        {isMenuOpen && <div className={'menu_overlay'} />}
+        <div id={"menu_overlay"} className={isMenuOpen ? 'menu_overlay_open' : ''} />
         <Menu
           isOpen={isMenuOpen}
           clickMenuItem={this.clickMenuItem}
