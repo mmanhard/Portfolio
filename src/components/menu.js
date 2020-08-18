@@ -15,30 +15,34 @@ const Menu = ({isOpen, toggleOpen, clickMenuItem}) => {
 
         <div id={"menu_btns"}>
 
-          <div className={"column_ctr menu_btn_bg"}>
+          <div className={"menu_btn_bg"}>
             <button onClick={() => { clickMenuItem('home') }}
-              className={"menu_btn"}>
+              className={"menu_btn"}
+              style={{position: 'relative', top: -26}}>
               HOME
             </button>
           </div>
 
-          <div className={"column_ctr menu_btn_bg"}>
+          <div className={"menu_btn_bg"}>
             <button onClick={() => { clickMenuItem('projects') }}
-              className={"menu_btn"}>
+              className={"menu_btn"}
+              style={{position: 'relative', top: -26}}>
               PROJECTS
             </button>
           </div>
 
-          <div className={"column_ctr menu_btn_bg"}>
+          <div className={"menu_btn_bg"}>
             <button onClick={() => { clickMenuItem('now') }}
-              className={"menu_btn"}>
+              className={"menu_btn"}
+              style={{position: 'relative', top: -26}}>
               NOW
             </button>
           </div>
 
-          <div className={"column_ctr menu_btn_bg"}>
+          <div className={"menu_btn_bg"}>
             <button onClick={() => { clickMenuItem('resume') }}
-              className={"menu_btn"}>
+              className={"menu_btn"}
+              style={{position: 'relative', top: -26}}>
               RESUME
             </button>
           </div>
