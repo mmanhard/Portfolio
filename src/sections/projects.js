@@ -16,14 +16,14 @@ const Projects = ({ displayVideo, allowScroll }) => {
       },
       touche_img_1: file(relativePath: { eq: "Touche-1.png" }) {
         childImageSharp {
-          fluid(maxHeight: 200) {
+          fluid(maxHeight: 400) {
             ...GatsbyImageSharpFluid
           }
         }
       },
-      touche_img_2: file(relativePath: { eq: "Touche-2.png" }) {
+      touche_img_2: file(relativePath: { eq: "Touche-1.png" }) {
         childImageSharp {
-          fluid(maxHeight: 200) {
+          fluid(maxHeight: 400) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -100,7 +100,8 @@ const Projects = ({ displayVideo, allowScroll }) => {
                 href: "https://github.com/mmanhard/Touche",
                 text: "SOURCE",
               }]}
-          displayVideo={displayVideo} />
+          displayVideo={displayVideo}
+          isMobile={true} />
 
         <hr />
 

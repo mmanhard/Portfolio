@@ -1,7 +1,7 @@
 import React from "react"
 import Img from "gatsby-image"
 
-const PortraitProjectItem = ({title, platform, description, techStack, images, links, displayVideo}) => (
+const PortraitProjectItem = ({title, platform, description, techStack, images, links, displayVideo, isMobile}) => (
   <div className={"portrait_container"}>
     <div className={"portait_content"}>
 
@@ -19,7 +19,7 @@ const PortraitProjectItem = ({title, platform, description, techStack, images, l
       ))}
 
       <div className={'visible_small'}>
-        <PortraitImages title={title} images={images} />
+        <PortraitImages title={title} images={images} isMobile={isMobile} />
       </div>
 
       <div className={"row_space portrait_btns"}>
@@ -38,16 +38,16 @@ const PortraitProjectItem = ({title, platform, description, techStack, images, l
     </div>
 
     <div className={'not_visible_small'}>
-      <PortraitImages title={title} images={images} />
+      <PortraitImages title={title} images={images} isMobile={isMobile} />
     </div>
   </div>
 )
 
-const PortraitImages = ({ title, images }) => (
+const PortraitImages = ({ title, images, isMobile }) => (
   <>
     {images.map((image, index) => (
       <div key={title + index} className={index > 0 ? "second_img portrait_img" : "portrait_img"}>
-        {image && <Img className={"project_img"} fluid={image.childImageSharp.fluid} />}
+        {image && <Img className={isMobile ? "mobile_img" : "project_img"} fluid={image.childImageSharp.fluid} />}
       </div>
     ))}
   </>
