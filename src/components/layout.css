@@ -647,6 +647,17 @@ a.sidebar_btn:hover::before {
   width: 650px;
 }
 
+#scroll_txt {
+  margin-top: 60px;
+  margin-bottom: 8px;
+}
+
+#down_icon {
+  width: 18px;
+  height: 18px;
+  margin-bottom: 10px;
+}
+
 #video_container {
   margin-top: 5%;
   position: relative;
@@ -686,7 +697,7 @@ a.sidebar_btn:hover::before {
 #portrait {
   width: 400px;
   margin-top: 80px;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0;
 }
 
 #video_close_btn {
@@ -923,6 +934,12 @@ a.sidebar_btn:hover::before {
     font-size: 1.33rem;
   }
 
+  h4 {
+    font-size: 1rem;
+    margin-top: 20px;
+    margin-bottom: 12px;
+  }
+
   h5 {
     font-size: 0.75rem;
   }
@@ -959,14 +976,19 @@ a.sidebar_btn:hover::before {
     width: 120px;
   }
 
+  #scroll_txt {
+    margin-top:10px;
+    margin-bottom: 8px;
+  }
+
   #resume_title {
     height: 60px;
   }
 
   #portrait {
-    width: 85%;
-    margin-top: 40px;
-    margin-bottom: 1.45rem;
+    width: 80%;
+    margin-top: 20px;
+    margin-bottom: 0px;
   }
 }
 
@@ -975,6 +997,7 @@ a.sidebar_btn:hover::before {
 @media (hover:none), (pointer:none), (pointer:coarse) {
   section {
     height: auto;
+    min-height: 100%;
     margin-bottom: 0px;
     position: relative;
     box-shadow: none;
@@ -1001,6 +1024,22 @@ a.sidebar_btn:hover::before {
   100% {
     transform: translateY(0);
   }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(15%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+#down_icon {
+  animation: bounce 1.2s ease 1.5s infinite alternate;
 }
 
 #home_container {

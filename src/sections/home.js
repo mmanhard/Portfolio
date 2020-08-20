@@ -1,6 +1,8 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faLevelDownAlt } from "@fortawesome/free-solid-svg-icons"
 
 const Home = () => {
   const data = useStaticQuery(graphql`
@@ -38,6 +40,11 @@ const Home = () => {
           A recent convert from structural engineering, I’m a resourceful engineer
           in the midst of getting his hands dirty designing and building software.
         </p>
+
+        <p id={"scroll_txt"}>
+          Scroll to see some of my work.
+        </p>
+        <FontAwesomeIcon id={"down_icon"} icon={faLevelDownAlt} />
 
       </div>
     </section>
