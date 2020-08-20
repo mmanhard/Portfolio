@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { navigate } from "@reach/router"
 
 import Header from "./header"
 import Menu from "./menu"
@@ -65,17 +66,25 @@ class Layout extends React.Component {
     this.goToSection('home');
   }
 
-  goToSection = (section) => {
-    const main = document.getElementById('main_container');
-    const content = document.getElementById(`${section}_container`);
+  goToSection = (sectionName) => {
+    const section = document.getElementById(sectionName);
+    const posType = window.getComputedStyle(section).position;
 
-    main.scrollTo({
-      top: (400 + main.clientHeight) * sectionMap[section]
-    });
+    if (posType === 'sticky') {
+      const main = document.getElementById('main_container');
+      const content = document.getElementById(`${sectionName}_container`);
 
-    content.scrollTo({
-      top: 0
-    });
+      main.scrollTo({
+        top: (400 + main.clientHeight) * sectionMap[sectionName]
+      });
+
+      content.scrollTo({
+        top: 0
+      });
+    } else {
+      navigate(`/#${sectionName}`);
+    }
+
   }
 
   render() {

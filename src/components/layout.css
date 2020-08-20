@@ -970,6 +970,17 @@ a.sidebar_btn:hover::before {
   }
 }
 
+
+/* Mobile devices only */
+@media (hover:none), (pointer:none), (pointer:coarse) {
+  section {
+    height: auto;
+    margin-bottom: 0px;
+    position: relative;
+    box-shadow: none;
+  }
+}
+
 /* ********** */
 /* Animations */
 /* ********** */
