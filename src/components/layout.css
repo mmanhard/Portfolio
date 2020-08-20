@@ -441,7 +441,7 @@ li.resume {
   text-align: left;
 }
 
-.projects_container {
+#projects_container {
   width: 800px;
   display: flex;
   flex-direction: column;
@@ -452,7 +452,7 @@ li.resume {
 }
 
 #resume_container.no_scroll,
-.projects_container.no_scroll {
+#projects_container.no_scroll {
   overflow: hidden;
 }
 
@@ -645,8 +645,6 @@ a.sidebar_btn:hover::before {
 
 #home_container {
   width: 650px;
-  overflow: auto;
-  scroll-behavior: smooth;
 }
 
 #video_container {
@@ -728,7 +726,7 @@ a.sidebar_btn:hover::before {
     font-size: 2.0rem;
   }
 
-  .projects_container {
+  #projects_container {
     width: 650px;
   }
 
@@ -770,7 +768,7 @@ a.sidebar_btn:hover::before {
     font-size: 1.78rem;
   }
 
-  .projects_container {
+  #projects_container {
     width: 525px;
   }
 
@@ -835,11 +833,6 @@ a.sidebar_btn:hover::before {
     align-items: center;
   }
 
-  .projects_container {
-    flex: 1;
-    width: 100%;
-  }
-
   .landscape_container {
     display: block;
     margin-left: 10px;
@@ -895,9 +888,11 @@ a.sidebar_btn:hover::before {
     width: 100%;
   }
 
+  #projects_container,
   #now_container {
     flex: 1;
     width: 100%;
+    order: 2;
   }
 
   #resume_container {

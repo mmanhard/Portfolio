@@ -48,7 +48,7 @@ const Projects = ({ displayVideo, allowScroll }) => {
   return (
     <section id={'projects'}>
 
-      <div id={"projects_container"} className={allowScroll ? "projects_container" : "projects_container no_scroll"}>
+      <div id={"projects_container"} className={allowScroll ? "" : "no_scroll"}>
 
         <LandscapeProjectItem
           title={"Pain Control"}
@@ -137,7 +137,7 @@ const Projects = ({ displayVideo, allowScroll }) => {
                 section: "Deployment",
                 tech: "AWS S3",
               }]}
-          images={[]}
+          images={[data.pain_control_img]}
           links={[
               { href: "http://mmanhard.com/",
                 text: "LIVE",
