@@ -83,8 +83,8 @@ const Resume = ({ allowScroll }) => {
             items={bulletPoints.dpn}/>
 
           <ResumeMainItem
-            org={'Princeton Varsity Men\'s Swimming & Diving'}
-            role={'Diving Team Member'}
+            org={'Princeton Varsity Men\'s Diving'}
+            role={''}
             startDate={'Sep \'11'}
             endDate={'Mar \'15'}
             items={bulletPoints.pucsdt}/>
