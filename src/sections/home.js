@@ -44,7 +44,9 @@ const Home = () => {
         <p id={"scroll_txt"}>
           Scroll to see some of my work.
         </p>
-        <FontAwesomeIcon id={"down_icon"} icon={faLevelDownAlt} />
+        <a className={"column_ctr"} href="#projects">
+          <FontAwesomeIcon id={"down_icon"} icon={faLevelDownAlt} />
+        </a>
 
       </div>
     </section>
