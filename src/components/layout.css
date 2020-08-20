@@ -725,6 +725,7 @@ a.sidebar_btn:hover::before {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-right: 20px;
 }
 
 #resume_name {
@@ -996,6 +997,11 @@ a.sidebar_btn:hover::before {
 
   #resume_title {
     height: 60px;
+    margin-right: 10px;
+  }
+
+  #download_btn {
+    font-size: 0.56rem;
   }
 
   #portrait {
