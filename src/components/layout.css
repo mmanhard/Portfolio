@@ -141,7 +141,7 @@ img {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0;
   border-style: none;
 }
 
@@ -456,6 +456,10 @@ li.resume {
   overflow: hidden;
 }
 
+.mobile_img {
+  background-color: transparent;
+}
+
 .project_img {
   box-shadow: 1px 2px 6px 2px #ccc;
 }
@@ -510,6 +514,7 @@ li.resume {
 .not_visible_small {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .visible_small {
@@ -519,6 +524,7 @@ li.resume {
 .portrait_img {
   width: 150px;
   margin-left: 20px;
+  margin-bottom: 0px;
 }
 
 button.project_btn,
@@ -891,8 +897,10 @@ a.sidebar_btn:hover::before {
 
   .visible_small {
     display: flex;
-    width: 100%;
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
+    width: 100%;
     margin-top: 12px;
   }
 
@@ -974,7 +982,8 @@ a.sidebar_btn:hover::before {
   }
 
   .portrait_img {
-    width: 120px;
+    max-width: 150px;
+    width: 40%;
   }
 
   #scroll_txt {
