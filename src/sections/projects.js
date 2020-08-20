@@ -16,14 +16,14 @@ const Projects = ({ displayVideo, allowScroll }) => {
       },
       touche_img_1: file(relativePath: { eq: "Touche-1.png" }) {
         childImageSharp {
-          fluid(maxWidth: 800) {
+          fluid(maxHeight: 200) {
             ...GatsbyImageSharpFluid
           }
         }
       },
       touche_img_2: file(relativePath: { eq: "Touche-2.png" }) {
         childImageSharp {
-          fluid(maxWidth: 800) {
+          fluid(maxHeight: 200) {
             ...GatsbyImageSharpFluid
           }
         }
