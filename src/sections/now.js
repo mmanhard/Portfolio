@@ -50,7 +50,9 @@ const Now = () => (
 
     <div className={"column_ctr title_container"}>
       <h1>NOW.</h1>
-      <a id={"now_anchor"} href={"https://nownownow.com/about"}>What is this?</a>
+      <a id={"now_anchor"} href={"https://nownownow.com/about"} target="_blank">
+        What is this?
+      </a>
     </div>
 
   </section>
