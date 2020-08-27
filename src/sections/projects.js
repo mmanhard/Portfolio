@@ -116,6 +116,10 @@ const Projects = ({ displayVideo, allowScroll }) => {
           images={[data.fresh_focus_img_1, data.fresh_focus_img_2]}
           links={[
               {
+                href: "https://chrome.google.com/webstore/detail/fresh-focus/fjkljljefpifhcppppgmjinfmkgjooap?hl=en-US",
+                text: "LIVE",
+              },
+              {
                 href: "https://github.com/mmanhard/FreshFocus",
                 text: "SOURCE",
               }]}
