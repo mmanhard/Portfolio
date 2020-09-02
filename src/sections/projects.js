@@ -53,6 +53,7 @@ const Projects = ({ displayVideo, allowScroll }) => {
         <LandscapeProjectItem
           title={"Pain Control"}
           platform={"Web App"}
+          type={"Solo Project - 2020"}
           description={"Pain Control gives users the ability to track their pain levels over time. Users enter their pain levels over the course of a day. Pain Control maps out how each of the user's pain points have changed throughout the day and over time. This information empowers users by helping them make insights about their pain and giving them an effective tool to communicate their pain history to doctors."}
           techStack={[
               { section: "Front End",
@@ -86,6 +87,7 @@ const Projects = ({ displayVideo, allowScroll }) => {
         <PortraitProjectItem
           title={"Touché"}
           platform={"iOS App"}
+          type={"Four-Person Project - 2015 | Solo Revision 2020"}
           description={"Ever been at dinner with friends and someone asks, \"Are hot dogs sandwiches, tacos, or something else entirely?\". Google doesn't have an answer for that, so that's where Touché comes in. Type in a question, get votes from people like you, prove your friends you were right. Touché."}
           techStack={[
               { section: "Front End",
@@ -108,6 +110,7 @@ const Projects = ({ displayVideo, allowScroll }) => {
         <PortraitProjectItem
           title={"Fresh Focus"}
           platform={"Chrome Extension"}
+          type={"Solo Project - 2020"}
           description={"Fresh Focus implements the Pomodoro method but takes it one step further: website blocking while in the middle of a session. Configure your Pomodoro session, start the timer, and your most distracting sites will be out of reach until the timer is done."}
           techStack={[
               { section: "Built With",
@@ -130,6 +133,7 @@ const Projects = ({ displayVideo, allowScroll }) => {
         <PortraitProjectItem
           title={"This Portfolio"}
           platform={"Web App"}
+          type={"Solo Project - 2020"}
           description={"This portfolio was built with the sole intention of showing my skills in the field of software engineering. It's built with GatsbyJS for one reason: speed. At build time, this site is rendered to static HTML and CSS. Once a user visits the site, a pre-packaged Javascript bundle is loaded asynchonously. Images are lazy loaded and queried using GraphQL."}
           techStack={[
               { section: "Front End",

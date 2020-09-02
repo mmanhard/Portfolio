@@ -1,11 +1,12 @@
 import React from "react"
 import Img from "gatsby-image"
 
-const PortraitProjectItem = ({title, platform, description, techStack, images, links, displayVideo, isMobile}) => (
+const PortraitProjectItem = ({title, platform, type, description, techStack, images, links, displayVideo, isMobile}) => (
   <div className={"portrait_container"}>
     <div className={"portait_content"}>
 
-      <h2>{title}<span>{platform}</span></h2>
+      <h2 style={{marginBottom: 4}}>{title}<span>{platform}</span></h2>
+      <h5 style={{marginBottom: 4}}>{type}</h5>
 
       <p className={"project_description"}>{description}</p>
 
