@@ -23,7 +23,7 @@ const Home = () => {
         <h1>WELCOME.</h1>
       </div>
 
-      <div className={"column_ctr"} id={"home_container"}>
+      <div id={"home_container"}>
 
         <div id={"portrait"}>
           <Img style={{borderRadius: 40}} fluid={data.portrait.childImageSharp.fluid} />
@@ -44,8 +44,8 @@ const Home = () => {
         <p id={"scroll_txt"}>
           Scroll to see some of my work.
         </p>
-        <a className={"column_ctr"} href="#projects">
-          <FontAwesomeIcon id={"down_icon"} icon={faLevelDownAlt} />
+        <a className={"column_ctr"} id={"down_icon"} href="#projects">
+          <FontAwesomeIcon icon={faLevelDownAlt} />
         </a>
 
       </div>

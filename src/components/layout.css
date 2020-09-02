@@ -716,7 +716,6 @@ a.sidebar_btn:hover::before {
 }
 
 #menu_btns {
-
   display: -webkit-flex;
   display: flex;
   flex-direction: column;
@@ -727,10 +726,18 @@ a.sidebar_btn:hover::before {
 
 #home_container {
   width: 650px;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  justify-content: flex-end;
+  -webkit-justify-content: flex-end;
+  align-items: center;
+  -webkit-align-items: center;
 }
 
 #scroll_txt {
-  margin-top: 60px;
+  margin-top: 50px;
   margin-bottom: 8px;
 }
 
@@ -783,7 +790,6 @@ a.sidebar_btn:hover::before {
 
 #portrait {
   width: 400px;
-  margin-top: 80px;
   margin-bottom: 0;
 }
 
@@ -1120,6 +1126,12 @@ a.sidebar_btn:hover::before {
     width: 80%;
     margin-top: 20px;
     margin-bottom: 0px;
+  }
+}
+
+@media only screen and (max-height: 649px){
+  #scroll_txt {
+    margin-top: 00px;
   }
 }
 
