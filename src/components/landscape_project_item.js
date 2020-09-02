@@ -29,7 +29,11 @@ const LandscapeProjectItem = ({title, platform, type, description, techStack, im
 
     <div className={"row_space"} style={{flexWrap: 'wrap', marginBottom: 0}}>
       {links.map(({href, text}) => (
-        <a key={href} className={"project_btn"} href={href} target="_blank">
+        <a key={href}
+          className={"project_btn"}
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer">
           <div className={"column_ctr"} style={{height: 16}}>VIEW</div>
           <div className={"column_ctr"} style={{height: 16}}>{text}</div>
         </a>

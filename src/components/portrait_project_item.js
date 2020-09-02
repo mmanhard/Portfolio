@@ -25,7 +25,11 @@ const PortraitProjectItem = ({title, platform, type, description, techStack, ima
 
       <div className={"row_space portrait_btns"}>
         {links.map(({href, text}) => (
-          <a key={href} className={"project_btn"} href={href} target="_blank">
+          <a key={href}
+            className={"project_btn"}
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer">
             <div className={"column_ctr"} style={{height: 16}}>VIEW</div>
             <div className={"column_ctr"} style={{height: 16}}>{text}</div>
           </a>

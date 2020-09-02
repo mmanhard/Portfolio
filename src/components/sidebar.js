@@ -7,17 +7,20 @@ const Sidebar = () => (
   <nav className={"sidebar"}>
     <a className={"sidebar_btn column_ctr"}
       href="https://www.linkedin.com/in/michael-m-manhard/"
-      target="_blank">
+      target="_blank"
+      rel="noopener noreferrer">
       <FontAwesomeIcon style={{width: 28, height: 28}} icon={faLinkedin} />
     </a>
     <a className={"sidebar_btn column_ctr"}
       href="https://github.com/mmanhard/"
-      target="_blank">
+      target="_blank"
+      rel="noopener noreferrer">
       <FontAwesomeIcon style={{width: 28, height: 28}} icon={faGithub} />
     </a>
     <a className={"sidebar_btn column_ctr"}
       href="mailto:mmanhard93@gmail.com"
-      target="_blank">
+      target="_blank"
+      rel="noopener noreferrer">
       <FontAwesomeIcon style={{width: 26, height: 26}} icon={faEnvelope} />
     </a>
   </nav>

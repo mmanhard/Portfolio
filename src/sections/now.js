@@ -50,7 +50,10 @@ const Now = () => (
 
     <div className={"column_ctr title_container"}>
       <h1>NOW.</h1>
-      <a id={"now_anchor"} href={"https://nownownow.com/about"} target="_blank">
+      <a id={"now_anchor"}
+        href={"https://nownownow.com/about"}
+        target="_blank"
+        rel="noopener noreferrer">
         What is this?
       </a>
     </div>
