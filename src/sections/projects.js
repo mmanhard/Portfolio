@@ -69,7 +69,7 @@ const Projects = ({ displayVideo, allowScroll }) => {
           image={data.pain_control_img}
           links={[
               {
-                href: "http://mypaincontroller.com/",
+                href: "https://mypaincontroller.com/",
                 text: "LIVE",
               },
               {
