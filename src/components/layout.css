@@ -312,7 +312,6 @@ li.resume {
 }
 
 .row_space {
-
   display: -webkit-flex;
   display: flex;
   flex-direction: row;
