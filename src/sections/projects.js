@@ -144,9 +144,6 @@ const Projects = ({ displayVideo, allowScroll }) => {
               }]}
           images={[]}
           links={[
-              { href: "http://mmanhard.com/",
-                text: "LIVE",
-              },
               {
                 href: "https://github.com/mmanhard/Portfolio",
                 text: "SOURCE",
