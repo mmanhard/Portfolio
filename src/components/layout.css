@@ -1044,6 +1044,11 @@ a.sidebar_btn:hover::before {
     font-size: 1.25rem;
     text-decoration: none;
   }
+
+  #portrait {
+    width: 320px;
+    margin-top: 20px;
+  }
 }
 
 @media only screen and (max-width: 549px){
@@ -1124,7 +1129,6 @@ a.sidebar_btn:hover::before {
 
   #portrait {
     width: 80%;
-    margin-top: 20px;
     margin-bottom: 0px;
   }
 }
