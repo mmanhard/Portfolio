@@ -46,6 +46,15 @@ class IndexPage extends React.Component {
       <>
         <Helmet title={"MMANHARD"} defer={false}>
           <meta charSet="utf-8" />
+          <meta
+            name="keywords"
+            content="Manhard mmanhard michael mmm swe software" />
+          <meta
+            name="description"
+            content="I'm Michael Manhard. This is a collection of my work as a software engineer." />
+          <meta
+            name="author"
+            content="Michael Manhard" />
           <link rel="canonical" href="https://mmanhard.com" />
         </Helmet>
 
