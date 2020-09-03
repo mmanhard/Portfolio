@@ -1,4 +1,5 @@
 import React from "react"
+import Helmet from "react-helmet"
 
 import Layout from "../components/layout"
 import VideoLayout from "../components/video_layout"
@@ -42,25 +43,32 @@ class IndexPage extends React.Component {
 
 
     return (
-      <Layout
-        isVideoOpen={isVideoOpen}
-        closeVideo={this.closeVideo}
-        allowProjectScroll={projectScroll}
-        setProjectScroll={this.setProjectScroll}
-        allowResumeScroll={resumeScroll}
-        setResumeScroll={this.setResumeScroll}>
+      <>
+        <Helmet title={"MMANHARD"} defer={false}>
+          <meta charSet="utf-8" />
+          <link rel="canonical" href="https://mmanhard.com" />
+        </Helmet>
 
-        <Home />
-        <Projects allowScroll={projectScroll} displayVideo={this.displayVideo} />
-        <Now />
-        <Resume allowScroll={resumeScroll} />
+        <Layout
+          isVideoOpen={isVideoOpen}
+          closeVideo={this.closeVideo}
+          allowProjectScroll={projectScroll}
+          setProjectScroll={this.setProjectScroll}
+          allowResumeScroll={resumeScroll}
+          setResumeScroll={this.setResumeScroll}>
 
-        {(isVideoOpen && projectTitle) &&
-          <VideoLayout
-            projectTitle={projectTitle}
-            closeVideo={this.closeVideo} />}
+          <Home />
+          <Projects allowScroll={projectScroll} displayVideo={this.displayVideo} />
+          <Now />
+          <Resume allowScroll={resumeScroll} />
 
-      </Layout>
+          {(isVideoOpen && projectTitle) &&
+            <VideoLayout
+              projectTitle={projectTitle}
+              closeVideo={this.closeVideo} />}
+
+        </Layout>
+      </>
     );
   }
 }
