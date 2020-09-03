@@ -1,6 +1,7 @@
 import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faTimes } from "@fortawesome/free-solid-svg-icons"
+import { faTimes, faEnvelope } from "@fortawesome/free-solid-svg-icons"
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons"
 
 const Menu = ({isOpen, toggleOpen, clickMenuItem}) => {
 
@@ -36,7 +37,29 @@ const Menu = ({isOpen, toggleOpen, clickMenuItem}) => {
             RESUME
           </button>
 
+          <div className={"row_space contact_menu_btns"}>
+            <a className={"sidebar_btn column_ctr"}
+              href="https://www.linkedin.com/in/michael-m-manhard/"
+              target="_blank"
+              rel="noopener noreferrer">
+              <FontAwesomeIcon style={{width: 28, height: 28}} icon={faLinkedin} />
+            </a>
+            <a className={"sidebar_btn column_ctr"}
+              href="https://github.com/mmanhard/"
+              target="_blank"
+              rel="noopener noreferrer">
+              <FontAwesomeIcon style={{width: 28, height: 28}} icon={faGithub} />
+            </a>
+            <a className={"sidebar_btn column_ctr"}
+              href="mailto:mmanhard93@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer">
+              <FontAwesomeIcon style={{width: 26, height: 26}} icon={faEnvelope} />
+            </a>
+          </div>
         </div>
+
+
       </>
     );
 

@@ -474,6 +474,10 @@ li.resume {
   visibility: hidden;
 }
 
+.contact_menu_btns {
+  visibility: hidden;
+}
+
 .home_page_content {
   width: 380px;
   margin-left: 20px;
@@ -1099,6 +1103,10 @@ a.sidebar_btn:hover::before {
 
   .sidebar {
     visibility: hidden;
+  }
+
+  .contact_menu_btns {
+    visibility: visible;
   }
 
   .home_page_content {
