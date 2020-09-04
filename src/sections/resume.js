@@ -24,7 +24,7 @@ const Resume = ({ allowScroll }) => {
 
           <ResumeMainItem
             org={'Calibrate Consulting, LLC'}
-            role={'Software Engineer'}
+            role={'Freelance Software Engineer'}
             startDate={'Feb \'20'}
             endDate={'Now'}
             items={bulletPoints.calibrate}/>
@@ -45,7 +45,7 @@ const Resume = ({ allowScroll }) => {
 
           <ResumeMainItem
             org={'Tally App'}
-            role={'Software Engineer Intern'}
+            role={'Software Engineering Intern'}
             startDate={'Jun \'15'}
             endDate={'Aug \'15'}
             items={bulletPoints.tally}/>
@@ -117,7 +117,7 @@ const ResumeMainItem = ({org, role, startDate, endDate, items}) => (
 const bulletPoints = {
   calibrate: [
     'Implemented caching on the frontend of a React Native application to reduce loading times by over 30%.',
-    'Created responsive animations that track user gestures and scale across various screen sizes in React Native.',
+    'Created responsive animations that track user gestures and scale with various screen sizes of a React Native application.',
     'Communicated with a team of engineers located abroad to ensure software issues were resolved in a timely manner.'
   ],
   wsp_eng: [
@@ -136,7 +136,7 @@ const bulletPoints = {
     'Relevant Coursework: Machine Learning'
   ],
   princeton: [
-    'Academic Honors: Summa Cum Laude, George Mueller Engineer-Athlete Award; David Carmichael Thesis Prize; NJ ACI Civil Engineering Scholarship; Phi Beta Kappa, Sigma Xi, and Tau Beta Pi Honor Societies',
+    'Academic Honors: Summa Cum Laude, George Mueller Engineer-Athlete Award, David Carmichael Thesis Prize, NJ ACI Civil Engineering Scholarship, Phi Beta Kappa, Sigma Xi, and Tau Beta Pi',
     'Relevant Coursework: Algorithms & Data Structures, Programming Systems, Functional Programming, Computing for the Physical and Social Sciences, Advanced Programming Techniques'
   ],
   ace: [
