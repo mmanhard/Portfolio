@@ -563,6 +563,8 @@ li.resume {
 
 .portrait_btns {
   margin-top: 10px;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
 }
 
 .not_visible_small {
@@ -579,7 +581,7 @@ li.resume {
 }
 
 .portrait_img {
-  width: 150px;
+  width: 140px;
   margin-left: 20px;
   margin-bottom: 0px;
 }
@@ -995,6 +997,7 @@ a.sidebar_btn:hover::before {
 
   .second_img {
     display: block;
+    margin-right: 20px;
   }
 
   .resume_item_title {
