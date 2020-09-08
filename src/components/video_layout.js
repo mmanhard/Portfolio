@@ -11,8 +11,8 @@ const VideoLayout = ({ projectTitle, closeVideo }) => {
   return (
     <div className={'video_overlay column_ctr'}>
 
-      <div className={'column_space video_content'}>
-        <div id={"video_container"} style={{paddingTop: height, width}}>
+      <div className={'column_ctr video_content'}>
+        <div id={"video_container"} style={{minHeight: 400, minWidth: 300, paddingTop: height, width}}>
           <iframe
             title={projectTitle}
             src={projectToURL[projectTitle]}
@@ -20,8 +20,8 @@ const VideoLayout = ({ projectTitle, closeVideo }) => {
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen={true} />
         </div>
-        <h1 style={{marginBottom: 20}}>{projectTitle}</h1>
-        <button id={"video_close_btn"} onClick={closeVideo} style={{marginBottom: 20}}>
+        <h1 style={{marginLeft: 0, marginBottom: 20}}>{projectTitle}</h1>
+        <button id={"video_close_btn"} onClick={closeVideo}>
           <FontAwesomeIcon style={{width: 30, height: 30, color: '#fff'}} icon={faTimesCircle} />
         </button>
       </div>
@@ -35,7 +35,7 @@ VideoLayout.propTypes = {
 
 const projectToURL = {
   'Pain Control': "https://www.youtube.com/embed/md52E5fJaUE?autoplay=1",
-  'Touché': "https://www.youtube.com/embed/md52E5fJaUE?autoplay=1",
+  'Touché': "https://www.youtube.com/embed/g1BURNPrWfc?autoplay=1",
   'Fresh Focus': "https://www.youtube.com/embed/yAW-TZSDn6A?autoplay=1"
 }
 
@@ -46,7 +46,7 @@ const projectDimRatios = {
   },
   'Touché': {
     height: '60%',
-    width: '90%',
+    width: '40%',
   },
   'Fresh Focus': {
     height: '60%',

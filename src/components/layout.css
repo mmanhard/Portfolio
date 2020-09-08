@@ -440,8 +440,9 @@ li.resume {
 }
 
 .video_content {
-  height: 100%;
+  height: calc(100%-50px);
   width: 100%;
+  max-width: 105vh;
 }
 
 .rotate_neg_90 {
@@ -1147,6 +1148,10 @@ a.sidebar_btn:hover::before {
 @media only screen and (max-height: 649px){
   #scroll_txt {
     margin-top: 00px;
+  }
+
+  h1 {
+    font-size: 1.33rem;
   }
 }
 
