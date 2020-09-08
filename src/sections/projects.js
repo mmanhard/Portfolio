@@ -21,7 +21,7 @@ const Projects = ({ displayVideo, allowScroll }) => {
           }
         }
       },
-      touche_img_2: file(relativePath: { eq: "Touche-1.png" }) {
+      touche_img_2: file(relativePath: { eq: "Touche-2.png" }) {
         childImageSharp {
           fluid(maxHeight: 400) {
             ...GatsbyImageSharpFluid
