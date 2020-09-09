@@ -486,7 +486,8 @@ li.resume {
 }
 
 #projects_container {
-  width: 800px;
+  width: 50%;
+  min-width: 800px;
   display: -webkit-flex;
   display: flex;
   flex-direction: column;
@@ -708,7 +709,6 @@ a.sidebar_btn:hover::before {
 }
 
 .resume_item_title {
-
   display: -webkit-flex;
   display: flex;
   width: 100%;
@@ -732,7 +732,8 @@ a.sidebar_btn:hover::before {
 }
 
 #home_container {
-  width: 650px;
+  min-width: 650px;
+  width: 40%;
   display: -webkit-flex;
   display: flex;
   flex-direction: column;
@@ -744,14 +745,14 @@ a.sidebar_btn:hover::before {
 }
 
 #scroll_txt {
-  margin-top: 50px;
+  margin-top: 80px;
   margin-bottom: 8px;
 }
 
 #down_icon {
   width: 18px;
   height: 18px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   color: #000;
 }
 
@@ -761,7 +762,8 @@ a.sidebar_btn:hover::before {
 }
 
 #now_container {
-  width: 650px;
+  min-width: 650px;
+  width: 40%;
   display: -webkit-flex;
   display: flex;
   flex-direction: column;
@@ -784,7 +786,8 @@ a.sidebar_btn:hover::before {
 
 #resume_container {
   background-color: #f8f8f8;
-  width: 750px;
+  width: 40%;
+  min-width: 750px;
   position: relative;
   overflow: auto;
   scroll-behavior: smooth;
@@ -845,10 +848,6 @@ a.sidebar_btn:hover::before {
     font-size: 2.0rem;
   }
 
-  #projects_container {
-    width: 650px;
-  }
-
   .landscape_content {
     flex-direction: column;
     -webkit-flex-direction: column;
@@ -872,16 +871,16 @@ a.sidebar_btn:hover::before {
     display: none;
   }
 
-  #home_container {
-    width: 550px;
-  }
-
+  #home_container,
   #now_container {
     width: 550px;
+    min-width: 0;
   }
 
+  #projects_container,
   #resume_container {
     width: 650px;
+    min-width: 0;
   }
 }
 
@@ -1145,11 +1144,18 @@ a.sidebar_btn:hover::before {
   }
 }
 
-@media only screen and (max-height: 649px){
-  #scroll_txt {
-    margin-top: 00px;
+@media only screen and (max-height: 749px){
+  #down_icon {
+    margin-bottom: 10px;
   }
 
+  #scroll_txt {
+    margin-top: 10px;
+  }
+
+}
+
+@media only screen and (max-height: 649px){
   h1 {
     font-size: 1.33rem;
   }
