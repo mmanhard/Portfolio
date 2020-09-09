@@ -12,7 +12,8 @@ const VideoLayout = ({ projectTitle, closeVideo }) => {
     <div className={'video_overlay column_ctr'}>
 
       <div className={'column_ctr video_content'}>
-        <div id={"video_container"} style={{minHeight: 400, minWidth: 300, paddingTop: height, width}}>
+        <div id={"video_container"}
+          style={{minHeight: 400, minWidth: 300, paddingTop: height, width}}>
           <iframe
             title={projectTitle}
             src={projectToURL[projectTitle]}
@@ -34,9 +35,9 @@ VideoLayout.propTypes = {
 }
 
 const projectToURL = {
-  'Pain Control': "https://www.youtube.com/embed/md52E5fJaUE?autoplay=1",
+  'Pain Control': "https://www.youtube.com/embed/T4vL9IhOX-Y?autoplay=1",
   'Touché': "https://www.youtube.com/embed/g1BURNPrWfc?autoplay=1",
-  'Fresh Focus': "https://www.youtube.com/embed/yAW-TZSDn6A?autoplay=1"
+  'Fresh Focus': "https://www.youtube.com/embed/UNRK4iWmiGU?autoplay=1"
 }
 
 const projectDimRatios = {
@@ -50,7 +51,7 @@ const projectDimRatios = {
   },
   'Fresh Focus': {
     height: '60%',
-    width: '50%',
+    width: '90%',
   },
 }
 
